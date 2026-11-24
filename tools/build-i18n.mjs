@@ -41,7 +41,7 @@ for (const code of ORDER) {
   const langselect = `<label class="lang-select"><span class="sr-only">${esc(d.lang_label)}</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><select id="lang" data-base="${base}">${options}</select></label>`;
   const jsKeys = Object.fromEntries(Object.entries(d).filter(([k]) => k.startsWith('js_') || k.startsWith('dl_') || k.startsWith('bg_')));
   const vars = {
-    lang: code, dir: RTL.has(code) ? 'rtl' : 'ltr', brand: esc(BRAND), base,
+    lang: code, dir: RTL.has(code) ? 'rtl' : 'ltr', brand: esc(BRAND), base, site_url: SITE_URL,
     alternates, redirect: code === 'en' ? redirect : '', langselect,
     i18njson: JSON.stringify(jsKeys).replace(/</g, '\\u003c'),
   };
@@ -71,3 +71,13 @@ for (const f of ['legal.html', 'privacy.html', 'licenses.html']) {
   if (fs.existsSync(src)) fs.writeFileSync(`site/${f}`, fs.readFileSync(src, 'utf8').replace(/\{\{brand\}\}/g, esc(BRAND)).replace(/\{\{source\}\}/g, SOURCE_URL ? `<a href="${esc(SOURCE_URL)}">${esc(SOURCE_URL)}</a>` : '<span class="todo">link coming soon</span>'));
 }
 console.log(`OK : ${ORDER.length} langues générées pour ${BRAND}`);
+
+// Manifeste pour l'icône sur l'écran d'accueil des téléphones
+fs.writeFileSync('site/site.webmanifest', JSON.stringify({
+  name: BRAND, short_name: BRAND, start_url: '/', display: 'standalone',
+  background_color: '#fffaf3', theme_color: '#ff7a1a',
+  icons: [
+    { src: '/assets/icon-192.png', sizes: '192x192', type: 'image/png' },
+    { src: '/assets/icon-512.png', sizes: '512x512', type: 'image/png' },
+  ],
+}, null, 2) + '\n');

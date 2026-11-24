@@ -63,11 +63,7 @@ button { font: inherit; color: inherit; }
   border-bottom: 1px solid transparent;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
-.brand-mark {
-  width: 26px; height: 26px; border-radius: 8px; position: relative;
-  background: var(--checker); background-size: 8px 8px; border: 2px solid var(--ink); overflow: hidden;
-}
-.brand-mark::after { content: ""; position: absolute; inset: 4px 4px 4px 4px; border-radius: 50%; background: var(--accent); }
+.brand-logo { display: block; height: 36px; width: auto; flex: none; }
 .site-nav { display: flex; gap: 22px; margin-inline-start: auto; font-size: 15px; color: var(--ink-2); }
 .site-nav a { text-decoration: none; }
 .site-nav a:hover { color: var(--ink); }
@@ -154,7 +150,8 @@ h1 em { font-style: normal; color: transparent; -webkit-text-stroke: 1.6px var(-
   display: flex; align-items: center; gap: 10px; height: 58px; padding: 0 12px;
   background: var(--card); border-bottom: 1px solid var(--line);
 }
-.ed-brand { font-weight: 800; letter-spacing: -.02em; }
+.ed-brand { font-weight: 800; letter-spacing: -.02em; display: inline-flex; align-items: center; gap: 8px; }
+.ed-brand .brand-logo { height: 28px; }
 .ed-top-mid { display: flex; align-items: center; gap: 4px; margin: 0 auto; }
 .compare-btn { font-size: 14px; font-weight: 600; user-select: none; -webkit-user-select: none; touch-action: none; }
 .compare-btn.is-on { background: var(--ink); color: #fff; }

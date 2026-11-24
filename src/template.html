@@ -6,18 +6,22 @@
   <title>{{brand}} · {{meta_title}}</title>
   <meta name="description" content="{{meta_desc}}">
   <meta name="theme-color" content="#101418">
-  <link rel="icon" href="{{base}}assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="{{base}}favicon.ico" sizes="any">
+  <link rel="icon" href="{{base}}assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{base}}assets/apple-touch-icon.png">
+  <link rel="manifest" href="{{base}}site.webmanifest">
   <link rel="stylesheet" href="{{base}}assets/styles.css">
   <meta property="og:title" content="{{brand}} · {{meta_title}}">
   <meta property="og:description" content="{{meta_desc}}">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="{{site_url}}/assets/og-image.png">
 {{alternates}}
 {{redirect}}
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="{{brand}}">
-      <span class="brand-mark" aria-hidden="true"></span>
+      <img class="brand-logo" src="{{base}}assets/logo-40.png" srcset="{{base}}assets/logo-80.png 2x" width="43" height="40" alt="">
       <span class="brand-name">{{brand}}</span>
     </a>
     <nav class="site-nav" aria-label="{{brand}}">
@@ -140,7 +144,7 @@
       <button class="icon-btn" data-action="close" title="{{ed_new}}" aria-label="{{ed_new}}">
         <svg class="flip-rtl" viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <span class="ed-brand">{{brand}}</span>
+      <span class="ed-brand"><img class="brand-logo" src="{{base}}assets/logo-40.png" srcset="{{base}}assets/logo-80.png 2x" width="30" height="28" alt="">{{brand}}</span>
       <div class="ed-top-mid">
         <button class="icon-btn" data-action="undo" title="{{ed_undo}} (Ctrl+Z)" aria-label="{{ed_undo}}" disabled>
           <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
