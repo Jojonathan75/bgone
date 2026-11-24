@@ -5,8 +5,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 // ======= À RÉGLER =======
-const BRAND = 'Bgone';                        // nom du site (provisoire)
-const SITE_URL = 'https://www.example.com';  // adresse finale du site, sans / à la fin
+const BRAND = 'Poppix';                        // nom du site
+const SITE_URL = 'https://poppix.app';  // adresse finale du site, sans / à la fin
 const SOURCE_URL = 'https://github.com/Jojonathan75/bgone';                        // lien du dépôt GitHub public (obligatoire pour la licence AGPL)
 // Ordre d'affichage dans le menu des langues
 const ORDER = ['en', 'es', 'fr', 'de', 'pt', 'it', 'nl', 'ar', 'hi', 'zh', 'ja', 'ko', 'ru', 'tr', 'id'];

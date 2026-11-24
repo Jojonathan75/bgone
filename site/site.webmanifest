@@ -1,6 +1,6 @@
 {
-  "name": "Bgone",
-  "short_name": "Bgone",
+  "name": "Poppix",
+  "short_name": "Poppix",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fffaf3",

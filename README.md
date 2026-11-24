@@ -1,4 +1,4 @@
-# Bgone (nom provisoire) : site de détourage d'images
+# Poppix : site de détourage d'images
 
 Site **100 % statique** : le détourage IA tourne dans le navigateur du visiteur. Aucun serveur, aucune base de données, aucun coût de calcul.
 
