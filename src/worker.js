@@ -13,12 +13,10 @@ function config(model, device) {
   };
 }
 
-async function pickDevice() {
-  try {
-    if (self.navigator.gpu && (await self.navigator.gpu.requestAdapter())) return 'gpu';
-  } catch (_) {}
-  return 'cpu';
-}
+// WebGPU est désactivé volontairement : avec ce modèle, ONNX Runtime Web plante sur WebGPU
+// (« using ceil() in shape computation is not yet supported for MaxPool »).
+// Le moteur WASM multi-cœur fonctionne partout et reste rapide (quelques secondes).
+async function pickDevice() { return 'cpu'; }
 
 self.onmessage = async (e) => {
   const { id, kind, rgba, width, height, model } = e.data;

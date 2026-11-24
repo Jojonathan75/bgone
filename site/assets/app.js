@@ -187,7 +187,15 @@ async function segment(model) {
   setProcessing(t('js_removing'), -1, t('js_starting'));
   const t0 = performance.now();
   try {
-    const res = await runSegmentation(model);
+    let res;
+    try { res = await runSegmentation(model); }
+    catch (first) {
+      // Repli : on relance un moteur neuf une seconde fois avant d'abandonner
+      console.warn('Nouvel essai après erreur du moteur :', first);
+      if (worker) { worker.terminate(); worker = null; }
+      dl.clear();
+      res = await runSegmentation(model);
+    }
     S.autoAlpha = res.alpha;
     S.model = model;
     if (S.ready) pushUndo();
