@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="id" dir="ltr" data-brand="Bgone">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bgone · Hapus latar belakang foto gratis</title>
+  <meta name="description" content="Hapus latar belakang foto apa pun dengan sekali klik, rapikan potongan dengan kuas, pasang latar baru, dan perbaiki gambar. Berjalan di browser Anda: foto tidak pernah keluar dari perangkat Anda.">
+  <meta name="theme-color" content="#101418">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <meta property="og:title" content="Bgone · Hapus latar belakang foto gratis">
+  <meta property="og:description" content="Hapus latar belakang foto apa pun dengan sekali klik, rapikan potongan dengan kuas, pasang latar baru, dan perbaiki gambar. Berjalan di browser Anda: foto tidak pernah keluar dari perangkat Anda.">
+  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://www.example.com/">
+  <link rel="alternate" hreflang="es" href="https://www.example.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://www.example.com/fr/">
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/">
+  <link rel="alternate" hreflang="pt" href="https://www.example.com/pt/">
+  <link rel="alternate" hreflang="it" href="https://www.example.com/it/">
+  <link rel="alternate" hreflang="nl" href="https://www.example.com/nl/">
+  <link rel="alternate" hreflang="ar" href="https://www.example.com/ar/">
+  <link rel="alternate" hreflang="hi" href="https://www.example.com/hi/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/">
+  <link rel="alternate" hreflang="ja" href="https://www.example.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://www.example.com/ko/">
+  <link rel="alternate" hreflang="ru" href="https://www.example.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://www.example.com/tr/">
+  <link rel="alternate" hreflang="id" href="https://www.example.com/id/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/">
+
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bgone">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Bgone</span>
+    </a>
+    <nav class="site-nav" aria-label="Bgone">
+      <a href="#how">Cara kerja</a>
+      <a href="#pricing">Harga</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <label class="lang-select"><span class="sr-only">Bahasa</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><select id="lang" data-base="../"><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="it">Italiano</option><option value="nl">Nederlands</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="zh">简体中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="ru">Русский</option><option value="tr">Türkçe</option><option value="id" selected>Bahasa Indonesia</option></select></label>
+    <button class="btn btn-primary btn-sm header-cta" data-action="pick">Unggah foto</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Hapus latar dengan AI · 100% di browser Anda</p>
+        <h1>Latarnya hilang.<br><em>Objeknya tetap.</em></h1>
+        <p class="lead">Unggah foto dan latar belakang terhapus otomatis. Rapikan detail dengan kuas, pasang latar baru, percantik warna, lalu unduh.</p>
+        <ul class="hero-points">
+          <li>Gratis dalam kualitas standar</li>
+          <li>Foto tetap di perangkat Anda</li>
+          <li>Tanpa daftar</li>
+        </ul>
+      </div>
+
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Letakkan gambar di sini">
+        <div class="dropzone-inner">
+          <div class="dz-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="48" height="48"><path d="M24 31V13m0 0-7 7m7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 30v5a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4v-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <p class="dz-title">Letakkan gambar di sini</p>
+          <p class="dz-sub">atau</p>
+          <span class="btn btn-primary">Pilih foto</span>
+          <p class="dz-hint">JPG, PNG, atau WEBP · atau tempel dengan Ctrl+V</p>
+        </div>
+        <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/avif,image/gif,image/bmp" hidden>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <div class="feature-ico ico-cut" aria-hidden="true"></div>
+        <h2>Potong otomatis</h2>
+        <p>Orang, produk, hewan, benda: objek dipisahkan dalam hitungan detik, termasuk rambut dan tepi halus.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-brush" aria-hidden="true"></div>
+        <h2>Rapikan dengan kuas</h2>
+        <p>Penghapus untuk sisa latar, kuas untuk mengembalikan yang hilang, dan penghalusan tepi yang bisa diatur.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-bg" aria-hidden="true"></div>
+        <h2>Latar baru</h2>
+        <p>Transparan, warna polos, gradasi, gambar Anda sendiri, atau foto asli yang diburamkan, dengan bayangan opsional.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-spark" aria-hidden="true"></div>
+        <h2>Perbaiki</h2>
+        <p>Perbaikan otomatis sekali klik, ditambah kecerahan, kontras, saturasi, kehangatan, dan ketajaman.</p>
+      </article>
+    </section>
+
+    <section class="how" id="how">
+      <h2 class="section-title">Cara kerja</h2>
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>Unggah</h3><p>Seret, tempel, atau pilih foto dari perangkat Anda.</p></li>
+        <li><span class="step-n">2</span><h3>Sesuaikan</h3><p>Latar terhapus otomatis. Rapikan bila perlu dan pilih latar.</p></li>
+        <li><span class="step-n">3</span><h3>Unduh</h3><p>PNG transparan, JPG, atau WEBP, dipotong sesuai objek jika mau.</p></li>
+      </ol>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2 class="section-title">Harga</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Gratis</h3>
+          <p class="price">Rp0</p>
+          <ul>
+            <li>Hapus latar tanpa batas</li>
+            <li>Retus, latar, dan perbaikan</li>
+            <li>Unduhan hingga 1500 px</li>
+          </ul>
+          <button class="btn btn-ghost" data-action="pick">Mulai</button>
+        </div>
+        <div class="plan plan-hd">
+          <span class="badge">Segera hadir</span>
+          <h3>Paket HD</h3>
+          <p class="price">Kredit</p>
+          <ul>
+            <li>Resolusi asli</li>
+            <li>Perbesar dengan AI ×2 dan ×4</li>
+            <li>1 kredit = 1 gambar HD, tanpa langganan</li>
+          </ul>
+          <button class="btn btn-ghost" data-action="hd-info">Pelajari lebih lanjut</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="section-title">Pertanyaan umum</h2>
+      <details><summary>Apakah foto saya diunggah ke server?</summary><p>Tidak. Penghapusan latar dan pengeditan dihitung oleh browser Anda, di perangkat Anda. Situs ini tidak mengirim atau menyimpan gambar apa pun.</p></details>
+      <details><summary>Mengapa potongan pertama lebih lama?</summary><p>Pertama kali, browser Anda mengunduh model AI (sekitar 45 hingga 90 MB tergantung kualitas). Setelah itu model disimpan di cache dan potongan berikutnya jauh lebih cepat.</p></details>
+      <details><summary>Hasilnya belum sempurna. Apa yang harus dilakukan?</summary><p>Buka tab Retus: penghapus membersihkan sisa latar, kuas Pulihkan mengembalikan bagian yang terhapus tanpa sengaja, dan penghalusan melembutkan tepi.</p></details>
+      <details><summary>Format apa saja yang bisa diunduh?</summary><p>PNG (dengan transparansi), JPG, dan WEBP. Pilih PNG agar latar tetap transparan.</p></details>
+      <details><summary>Apakah bisa di ponsel?</summary><p>Bisa, di browser terbaru. Di ponsel, model kualitas standar digunakan secara bawaan agar unduhan lebih kecil.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bgone</p>
+    <nav>
+      <a href="../legal.html">Informasi hukum</a>
+      <a href="../privacy.html">Privasi</a>
+      <a href="../licenses.html">Lisensi &amp; kode sumber</a>
+    </nav>
+  </footer>
+
+  <!-- ===================== EDITOR ===================== -->
+  <div class="editor" id="editor" hidden>
+    <div class="ed-top">
+      <button class="icon-btn" data-action="close" title="Gambar baru" aria-label="Gambar baru">
+        <svg class="flip-rtl" viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="ed-brand">Bgone</span>
+      <div class="ed-top-mid">
+        <button class="icon-btn" data-action="undo" title="Urungkan (Ctrl+Z)" aria-label="Urungkan" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" data-action="redo" title="Ulangi (Ctrl+Shift+Z)" aria-label="Ulangi" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="m15 14 5-5-5-5M20 9H10a6 6 0 0 0 0 12h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn compare-btn" data-action="compare" title="Tahan untuk melihat aslinya" aria-label="Tahan untuk melihat aslinya">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3v18M5 6h4v12H5zM15 6h4v12h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span>Sebelum / sesudah</span>
+        </button>
+      </div>
+      <button class="btn btn-primary btn-sm" data-action="download" disabled>Unduh</button>
+    </div>
+
+    <div class="ed-body">
+      <div class="stage" id="stage">
+        <div class="canvas-wrap" id="canvas-wrap">
+          <canvas id="view"></canvas>
+        </div>
+        <div class="brush-cursor" id="brush-cursor" hidden></div>
+        <div class="processing" id="processing" hidden>
+          <div class="proc-card">
+            <div class="proc-spinner" aria-hidden="true"></div>
+            <p class="proc-title" id="proc-title">Menghapus latar…</p>
+            <div class="proc-bar"><div class="proc-fill" id="proc-fill"></div></div>
+            <p class="proc-sub" id="proc-sub"></p>
+          </div>
+        </div>
+        <div class="zoom-ctrl">
+          <button class="icon-btn" data-action="zoom-out" aria-label="Perkecil">−</button>
+          <button class="zoom-label" data-action="zoom-fit" id="zoom-label" title="Sesuaikan layar">100 %</button>
+          <button class="icon-btn" data-action="zoom-in" aria-label="Perbesar">+</button>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel">
+        <div class="tabs" role="tablist">
+          <button role="tab" class="tab is-active" data-tab="bg" aria-selected="true">Latar</button>
+          <button role="tab" class="tab" data-tab="retouch" aria-selected="false">Retus</button>
+          <button role="tab" class="tab" data-tab="enhance" aria-selected="false">Perbaiki</button>
+        </div>
+
+        <div class="tab-pane" data-pane="bg">
+          <h3 class="pane-h">Warna</h3>
+          <div class="swatches" id="swatches"></div>
+          <h3 class="pane-h">Gradasi</h3>
+          <div class="swatches" id="gradients"></div>
+          <h3 class="pane-h">Gambar</h3>
+          <div class="bg-image-row">
+            <button class="chip" data-action="bg-blur">Buramkan foto asli</button>
+            <label class="chip">Gambar saya<input type="file" id="bg-file" accept="image/*" hidden></label>
+          </div>
+          <label class="row-toggle"><input type="checkbox" id="shadow"> Bayangan di bawah objek</label>
+        </div>
+
+        <div class="tab-pane" data-pane="retouch" hidden>
+          <div class="tool-row" role="radiogroup">
+            <button class="tool" data-tool="erase" role="radio" aria-checked="false">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="m7 21-4-4L14 6l7 7-8 8H7zM10 10l7 7M21 21H11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Hapus
+            </button>
+            <button class="tool" data-tool="restore" role="radio" aria-checked="false">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M18 3a3 3 0 0 1 3 3c0 2-6 8-8 10l-3-3c2-2 8-10 8-10zM9.5 13.5 10 14c0 3-2 6-7 6 1-1 1.5-2.5 1.5-4a3 3 0 0 1 5-2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Pulihkan
+            </button>
+            <button class="tool is-active" data-tool="pan" role="radio" aria-checked="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12m0-6.5v-1a1.5 1.5 0 0 1 3 0V12m0-6a1.5 1.5 0 0 1 3 0v6m0-3a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1.5a6 6 0 0 1-5-2.7L4 14.5a1.6 1.6 0 0 1 2.6-1.8L8 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Geser
+            </button>
+          </div>
+          <label class="slider"><span>Ukuran kuas <output id="o-size">40</output></span><input type="range" id="brush-size" min="4" max="300" value="40"></label>
+          <label class="slider"><span>Kekerasan <output id="o-hard">70</output></span><input type="range" id="brush-hard" min="0" max="100" value="70"></label>
+          <label class="row-toggle"><input type="checkbox" id="ghost" checked> Tampilkan foto asli samar</label>
+          <hr>
+          <h3 class="pane-h">Tepi</h3>
+          <label class="slider"><span>Penghalusan <output id="o-feather">0</output></span><input type="range" id="feather" min="0" max="20" value="0"></label>
+          <label class="slider"><span>Tepi (perkecil / perbesar) <output id="o-shift">0</output></span><input type="range" id="shift" min="-10" max="10" value="0"></label>
+          <hr>
+          <div class="btn-col">
+            <button class="btn btn-ghost btn-sm" data-action="reset-mask">Kembali ke potongan otomatis</button>
+            <button class="btn btn-ghost btn-sm" data-action="rerun-precise" id="rerun-precise">Ulangi dengan presisi maksimum</button>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="enhance" hidden>
+          <button class="btn btn-primary btn-block" data-action="auto-enhance">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" fill="currentColor"/></svg>
+            Perbaikan otomatis
+          </button>
+          <label class="slider"><span>Kecerahan <output id="o-bright">0</output></span><input type="range" id="bright" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Kontras <output id="o-contrast">0</output></span><input type="range" id="contrast" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Saturasi <output id="o-sat">0</output></span><input type="range" id="sat" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Kehangatan <output id="o-warm">0</output></span><input type="range" id="warm" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Ketajaman <output id="o-sharp">0</output></span><input type="range" id="sharp" min="0" max="100" value="0"></label>
+          <button class="btn btn-ghost btn-sm" data-action="reset-enhance">Atur ulang penyesuaian</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <dialog class="modal" id="dl-modal">
+    <form method="dialog" class="modal-card">
+      <h2>Unduh</h2>
+      <fieldset class="seg">
+        <legend>Format</legend>
+        <label><input type="radio" name="fmt" value="png" checked><span>PNG</span></label>
+        <label><input type="radio" name="fmt" value="jpg"><span>JPG</span></label>
+        <label><input type="radio" name="fmt" value="webp"><span>WEBP</span></label>
+      </fieldset>
+      <label class="row-toggle"><input type="checkbox" id="crop"> Potong sesuai objek</label>
+      <p class="fmt-note" id="fmt-note"></p>
+      <div class="dl-options">
+        <button class="dl-opt" value="std" id="dl-std">
+          <strong>Standar</strong>
+          <span id="dl-std-size"></span>
+          <em>Gratis</em>
+        </button>
+        <button class="dl-opt dl-hd" value="hd" id="dl-hd">
+          <strong>HD</strong>
+          <span id="dl-hd-size"></span>
+          <em>Segera · kredit</em>
+        </button>
+      </div>
+      <button class="modal-x" value="cancel" aria-label="Tutup">×</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="hd-modal">
+    <form method="dialog" class="modal-card">
+      <h2>HD: segera hadir</h2>
+      <p>Unduhan HD memberi Anda gambar dalam resolusi asli, dengan perbesaran AI ×2 atau ×4 untuk cetak dan layar besar.</p>
+      <p>Menggunakan paket kredit, tanpa langganan: 1 kredit = 1 gambar HD.</p>
+      <p class="muted">Sementara itu, unduhan standar gratis.</p>
+      <button class="btn btn-primary" value="ok">Mengerti</button>
+      <button class="modal-x" value="cancel" aria-label="Tutup">×</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="application/json" id="i18n">{"bg_color":"Warna","bg_gradients":"Gradasi","bg_image":"Gambar","bg_blur":"Buramkan foto asli","bg_own":"Gambar saya","bg_shadow":"Bayangan di bawah objek","bg_transparent":"Transparan","bg_custom":"Warna kustom","dl_format":"Format","dl_crop":"Potong sesuai objek","dl_std":"Standar","dl_free":"Gratis","dl_hd_soon":"Segera · kredit","dl_upto":"hingga {w} × {h} px","dl_jpg_note":"JPG tidak mendukung transparansi: latar akan putih.","dl_png_note":"Latar transparan dipertahankan.","js_preparing":"Menyiapkan AI…","js_download_once":"Unduhan sekali saja: {a} / {b} MB","js_removing":"Menghapus latar…","js_analyzing":"Menganalisis gambar","js_edges":"Merapikan tepi","js_starting":"Menjalankan mesin","js_not_image":"File ini bukan gambar.","js_cant_read":"Gambar ini tidak bisa dibaca. Coba JPG atau PNG (foto HEIC iPhone tidak didukung semua browser).","js_done":"Latar terhapus dalam {s} dtk","js_failed":"Gagal menghapus latar: {e}. Coba browser terbaru (Chrome, Edge, Firefox, Safari).","js_enhanced":"Perbaikan otomatis diterapkan","js_export_fail":"Ekspor tidak bisa dilakukan di browser ini.","js_downloaded":"Gambar diunduh ({w} × {h} px)","js_mask_reset":"Potongan otomatis dipulihkan","js_bg_fail":"Gambar latar ini tidak bisa dibaca."}</script>
+  <script type="module" src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh" dir="ltr" data-brand="Bgone">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bgone · 免费去除图片背景</title>
+  <meta name="description" content="一键去除任何照片的背景，用画笔精修抠图，换上新背景并优化图片。全部在浏览器中完成：您的照片不会离开您的设备。">
+  <meta name="theme-color" content="#101418">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <meta property="og:title" content="Bgone · 免费去除图片背景">
+  <meta property="og:description" content="一键去除任何照片的背景，用画笔精修抠图，换上新背景并优化图片。全部在浏览器中完成：您的照片不会离开您的设备。">
+  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://www.example.com/">
+  <link rel="alternate" hreflang="es" href="https://www.example.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://www.example.com/fr/">
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/">
+  <link rel="alternate" hreflang="pt" href="https://www.example.com/pt/">
+  <link rel="alternate" hreflang="it" href="https://www.example.com/it/">
+  <link rel="alternate" hreflang="nl" href="https://www.example.com/nl/">
+  <link rel="alternate" hreflang="ar" href="https://www.example.com/ar/">
+  <link rel="alternate" hreflang="hi" href="https://www.example.com/hi/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/">
+  <link rel="alternate" hreflang="ja" href="https://www.example.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://www.example.com/ko/">
+  <link rel="alternate" hreflang="ru" href="https://www.example.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://www.example.com/tr/">
+  <link rel="alternate" hreflang="id" href="https://www.example.com/id/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/">
+
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bgone">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Bgone</span>
+    </a>
+    <nav class="site-nav" aria-label="Bgone">
+      <a href="#how">使用方法</a>
+      <a href="#pricing">价格</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <label class="lang-select"><span class="sr-only">语言</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><select id="lang" data-base="../"><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="it">Italiano</option><option value="nl">Nederlands</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="zh" selected>简体中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="ru">Русский</option><option value="tr">Türkçe</option><option value="id">Bahasa Indonesia</option></select></label>
+    <button class="btn btn-primary btn-sm header-cta" data-action="pick">上传照片</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI 抠图 · 100% 在浏览器中完成</p>
+        <h1>背景消失。<br><em>主体留下。</em></h1>
+        <p class="lead">上传照片，背景会自动去除。用画笔修正细节，换上新背景，优化色彩，然后下载。</p>
+        <ul class="hero-points">
+          <li>标准画质免费</li>
+          <li>照片保留在您的设备上</li>
+          <li>无需注册</li>
+        </ul>
+      </div>
+
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="将图片拖到这里">
+        <div class="dropzone-inner">
+          <div class="dz-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="48" height="48"><path d="M24 31V13m0 0-7 7m7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 30v5a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4v-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <p class="dz-title">将图片拖到这里</p>
+          <p class="dz-sub">或</p>
+          <span class="btn btn-primary">选择照片</span>
+          <p class="dz-hint">JPG、PNG 或 WEBP · 也可用 Ctrl+V 粘贴</p>
+        </div>
+        <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/avif,image/gif,image/bmp" hidden>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <div class="feature-ico ico-cut" aria-hidden="true"></div>
+        <h2>自动抠图</h2>
+        <p>人物、商品、宠物、物品：几秒钟即可分离主体，包括头发和细小边缘。</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-brush" aria-hidden="true"></div>
+        <h2>画笔精修</h2>
+        <p>橡皮擦清除残留，画笔恢复缺失部分，边缘平滑程度可调。</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-bg" aria-hidden="true"></div>
+        <h2>更换背景</h2>
+        <p>透明、纯色、渐变、您自己的图片或模糊的原图，并可添加投影。</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-spark" aria-hidden="true"></div>
+        <h2>画质优化</h2>
+        <p>一键自动优化，另有亮度、对比度、饱和度、色温和锐度调节。</p>
+      </article>
+    </section>
+
+    <section class="how" id="how">
+      <h2 class="section-title">使用方法</h2>
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>上传</h3><p>从设备中拖放、粘贴或选择照片。</p></li>
+        <li><span class="step-n">2</span><h3>调整</h3><p>背景自动去除。如有需要可精修，并选择背景。</p></li>
+        <li><span class="step-n">3</span><h3>下载</h3><p>透明 PNG、JPG 或 WEBP，可按主体裁剪。</p></li>
+      </ol>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2 class="section-title">价格</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>免费</h3>
+          <p class="price">¥0</p>
+          <ul>
+            <li>无限次去除背景</li>
+            <li>精修、背景与优化</li>
+            <li>下载最高 1500 像素</li>
+          </ul>
+          <button class="btn btn-ghost" data-action="pick">开始使用</button>
+        </div>
+        <div class="plan plan-hd">
+          <span class="badge">即将推出</span>
+          <h3>高清套餐</h3>
+          <p class="price">点数</p>
+          <ul>
+            <li>原始分辨率</li>
+            <li>AI 放大 ×2 和 ×4</li>
+            <li>1 点 = 1 张高清图片，无需订阅</li>
+          </ul>
+          <button class="btn btn-ghost" data-action="hd-info">了解更多</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="section-title">常见问题</h2>
+      <details><summary>我的照片会上传到服务器吗？</summary><p>不会。抠图和编辑都由您的浏览器在您的设备上完成。本网站不会发送或保存任何图片。</p></details>
+      <details><summary>为什么第一次抠图比较慢？</summary><p>第一次使用时，浏览器需要下载 AI 模型（视画质约 45 到 90 MB）。之后模型会被缓存，后续抠图会快得多。</p></details>
+      <details><summary>效果不够完美怎么办？</summary><p>打开“精修”标签：橡皮擦清除残留背景，“恢复”画笔找回误删的部分，平滑功能让边缘更柔和。</p></details>
+      <details><summary>可以下载哪些格式？</summary><p>PNG（支持透明）、JPG 和 WEBP。要保留透明背景请选择 PNG。</p></details>
+      <details><summary>手机上能用吗？</summary><p>可以，使用较新的浏览器即可。在手机上默认使用标准画质模型，以减少下载量。</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bgone</p>
+    <nav>
+      <a href="../legal.html">法律声明</a>
+      <a href="../privacy.html">隐私</a>
+      <a href="../licenses.html">许可证与源代码</a>
+    </nav>
+  </footer>
+
+  <!-- ===================== EDITOR ===================== -->
+  <div class="editor" id="editor" hidden>
+    <div class="ed-top">
+      <button class="icon-btn" data-action="close" title="新图片" aria-label="新图片">
+        <svg class="flip-rtl" viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="ed-brand">Bgone</span>
+      <div class="ed-top-mid">
+        <button class="icon-btn" data-action="undo" title="撤销 (Ctrl+Z)" aria-label="撤销" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" data-action="redo" title="重做 (Ctrl+Shift+Z)" aria-label="重做" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="m15 14 5-5-5-5M20 9H10a6 6 0 0 0 0 12h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn compare-btn" data-action="compare" title="按住查看原图" aria-label="按住查看原图">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3v18M5 6h4v12H5zM15 6h4v12h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span>对比原图</span>
+        </button>
+      </div>
+      <button class="btn btn-primary btn-sm" data-action="download" disabled>下载</button>
+    </div>
+
+    <div class="ed-body">
+      <div class="stage" id="stage">
+        <div class="canvas-wrap" id="canvas-wrap">
+          <canvas id="view"></canvas>
+        </div>
+        <div class="brush-cursor" id="brush-cursor" hidden></div>
+        <div class="processing" id="processing" hidden>
+          <div class="proc-card">
+            <div class="proc-spinner" aria-hidden="true"></div>
+            <p class="proc-title" id="proc-title">正在去除背景…</p>
+            <div class="proc-bar"><div class="proc-fill" id="proc-fill"></div></div>
+            <p class="proc-sub" id="proc-sub"></p>
+          </div>
+        </div>
+        <div class="zoom-ctrl">
+          <button class="icon-btn" data-action="zoom-out" aria-label="缩小">−</button>
+          <button class="zoom-label" data-action="zoom-fit" id="zoom-label" title="适应屏幕">100 %</button>
+          <button class="icon-btn" data-action="zoom-in" aria-label="放大">+</button>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel">
+        <div class="tabs" role="tablist">
+          <button role="tab" class="tab is-active" data-tab="bg" aria-selected="true">背景</button>
+          <button role="tab" class="tab" data-tab="retouch" aria-selected="false">精修</button>
+          <button role="tab" class="tab" data-tab="enhance" aria-selected="false">优化</button>
+        </div>
+
+        <div class="tab-pane" data-pane="bg">
+          <h3 class="pane-h">颜色</h3>
+          <div class="swatches" id="swatches"></div>
+          <h3 class="pane-h">渐变</h3>
+          <div class="swatches" id="gradients"></div>
+          <h3 class="pane-h">图片</h3>
+          <div class="bg-image-row">
+            <button class="chip" data-action="bg-blur">模糊原图</button>
+            <label class="chip">我的图片<input type="file" id="bg-file" accept="image/*" hidden></label>
+          </div>
+          <label class="row-toggle"><input type="checkbox" id="shadow"> 主体下方投影</label>
+        </div>
+
+        <div class="tab-pane" data-pane="retouch" hidden>
+          <div class="tool-row" role="radiogroup">
+            <button class="tool" data-tool="erase" role="radio" aria-checked="false">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="m7 21-4-4L14 6l7 7-8 8H7zM10 10l7 7M21 21H11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              擦除
+            </button>
+            <button class="tool" data-tool="restore" role="radio" aria-checked="false">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M18 3a3 3 0 0 1 3 3c0 2-6 8-8 10l-3-3c2-2 8-10 8-10zM9.5 13.5 10 14c0 3-2 6-7 6 1-1 1.5-2.5 1.5-4a3 3 0 0 1 5-2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              恢复
+            </button>
+            <button class="tool is-active" data-tool="pan" role="radio" aria-checked="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12m0-6.5v-1a1.5 1.5 0 0 1 3 0V12m0-6a1.5 1.5 0 0 1 3 0v6m0-3a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1.5a6 6 0 0 1-5-2.7L4 14.5a1.6 1.6 0 0 1 2.6-1.8L8 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              移动
+            </button>
+          </div>
+          <label class="slider"><span>画笔大小 <output id="o-size">40</output></span><input type="range" id="brush-size" min="4" max="300" value="40"></label>
+          <label class="slider"><span>硬度 <output id="o-hard">70</output></span><input type="range" id="brush-hard" min="0" max="100" value="70"></label>
+          <label class="row-toggle"><input type="checkbox" id="ghost" checked> 半透明显示原图</label>
+          <hr>
+          <h3 class="pane-h">边缘</h3>
+          <label class="slider"><span>平滑 <output id="o-feather">0</output></span><input type="range" id="feather" min="0" max="20" value="0"></label>
+          <label class="slider"><span>边缘（收缩 / 扩展） <output id="o-shift">0</output></span><input type="range" id="shift" min="-10" max="10" value="0"></label>
+          <hr>
+          <div class="btn-col">
+            <button class="btn btn-ghost btn-sm" data-action="reset-mask">恢复自动抠图结果</button>
+            <button class="btn btn-ghost btn-sm" data-action="rerun-precise" id="rerun-precise">以最高精度重新处理</button>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="enhance" hidden>
+          <button class="btn btn-primary btn-block" data-action="auto-enhance">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" fill="currentColor"/></svg>
+            自动优化
+          </button>
+          <label class="slider"><span>亮度 <output id="o-bright">0</output></span><input type="range" id="bright" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>对比度 <output id="o-contrast">0</output></span><input type="range" id="contrast" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>饱和度 <output id="o-sat">0</output></span><input type="range" id="sat" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>色温 <output id="o-warm">0</output></span><input type="range" id="warm" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>锐度 <output id="o-sharp">0</output></span><input type="range" id="sharp" min="0" max="100" value="0"></label>
+          <button class="btn btn-ghost btn-sm" data-action="reset-enhance">重置调整</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <dialog class="modal" id="dl-modal">
+    <form method="dialog" class="modal-card">
+      <h2>下载</h2>
+      <fieldset class="seg">
+        <legend>格式</legend>
+        <label><input type="radio" name="fmt" value="png" checked><span>PNG</span></label>
+        <label><input type="radio" name="fmt" value="jpg"><span>JPG</span></label>
+        <label><input type="radio" name="fmt" value="webp"><span>WEBP</span></label>
+      </fieldset>
+      <label class="row-toggle"><input type="checkbox" id="crop"> 按主体裁剪</label>
+      <p class="fmt-note" id="fmt-note"></p>
+      <div class="dl-options">
+        <button class="dl-opt" value="std" id="dl-std">
+          <strong>标准</strong>
+          <span id="dl-std-size"></span>
+          <em>免费</em>
+        </button>
+        <button class="dl-opt dl-hd" value="hd" id="dl-hd">
+          <strong>HD</strong>
+          <span id="dl-hd-size"></span>
+          <em>即将推出 · 点数</em>
+        </button>
+      </div>
+      <button class="modal-x" value="cancel" aria-label="关闭">×</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="hd-modal">
+    <form method="dialog" class="modal-card">
+      <h2>高清：即将推出</h2>
+      <p>高清下载将提供原始分辨率的图片，并支持 AI 放大 ×2 或 ×4，适合打印和大屏幕。</p>
+      <p>采用点数套餐，无需订阅：1 点 = 1 张高清图片。</p>
+      <p class="muted">在此之前，标准下载免费。</p>
+      <button class="btn btn-primary" value="ok">知道了</button>
+      <button class="modal-x" value="cancel" aria-label="关闭">×</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="application/json" id="i18n">{"bg_color":"颜色","bg_gradients":"渐变","bg_image":"图片","bg_blur":"模糊原图","bg_own":"我的图片","bg_shadow":"主体下方投影","bg_transparent":"透明","bg_custom":"自定义颜色","dl_format":"格式","dl_crop":"按主体裁剪","dl_std":"标准","dl_free":"免费","dl_hd_soon":"即将推出 · 点数","dl_upto":"最高 {w} × {h} 像素","dl_jpg_note":"JPG 不支持透明：背景将为白色。","dl_png_note":"保留透明背景。","js_preparing":"正在准备 AI…","js_download_once":"仅需下载一次：{a} / {b} MB","js_removing":"正在去除背景…","js_analyzing":"正在分析图片","js_edges":"正在优化边缘","js_starting":"正在启动引擎","js_not_image":"此文件不是图片。","js_cant_read":"无法读取此图片。请尝试 JPG 或 PNG（并非所有浏览器都支持 iPhone 的 HEIC 照片）。","js_done":"背景已去除，用时 {s} 秒","js_failed":"去除背景失败：{e}。请使用较新的浏览器（Chrome、Edge、Firefox、Safari）。","js_enhanced":"已应用自动优化","js_export_fail":"此浏览器无法导出。","js_downloaded":"图片已下载（{w} × {h} 像素）","js_mask_reset":"已恢复自动抠图结果","js_bg_fail":"无法读取此背景图片。"}</script>
+  <script type="module" src="../assets/app.js"></script>
+</body>
+</html>

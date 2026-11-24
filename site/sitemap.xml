@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://www.example.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/nl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/hi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+  <url><loc>https://www.example.com/id/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.example.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.example.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.example.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.example.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.example.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.example.com/nl/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.example.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.example.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.example.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.example.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.example.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.example.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.example.com/id/"/>
+  </url>
+</urlset>

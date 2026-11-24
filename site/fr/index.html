@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="fr" dir="ltr" data-brand="Bgone">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bgone · Supprimer l'arrière-plan d'une image gratuitement</title>
+  <meta name="description" content="Supprimez le fond de vos photos en un clic, affinez le détourage au pinceau, changez l'arrière-plan et améliorez l'image. Tout se passe dans votre navigateur : vos photos ne quittent pas votre appareil.">
+  <meta name="theme-color" content="#101418">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <meta property="og:title" content="Bgone · Supprimer l'arrière-plan d'une image gratuitement">
+  <meta property="og:description" content="Supprimez le fond de vos photos en un clic, affinez le détourage au pinceau, changez l'arrière-plan et améliorez l'image. Tout se passe dans votre navigateur : vos photos ne quittent pas votre appareil.">
+  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="https://www.example.com/">
+  <link rel="alternate" hreflang="es" href="https://www.example.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://www.example.com/fr/">
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/">
+  <link rel="alternate" hreflang="pt" href="https://www.example.com/pt/">
+  <link rel="alternate" hreflang="it" href="https://www.example.com/it/">
+  <link rel="alternate" hreflang="nl" href="https://www.example.com/nl/">
+  <link rel="alternate" hreflang="ar" href="https://www.example.com/ar/">
+  <link rel="alternate" hreflang="hi" href="https://www.example.com/hi/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.example.com/zh/">
+  <link rel="alternate" hreflang="ja" href="https://www.example.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://www.example.com/ko/">
+  <link rel="alternate" hreflang="ru" href="https://www.example.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://www.example.com/tr/">
+  <link rel="alternate" hreflang="id" href="https://www.example.com/id/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/">
+
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bgone">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Bgone</span>
+    </a>
+    <nav class="site-nav" aria-label="Bgone">
+      <a href="#how">Comment ça marche</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <label class="lang-select"><span class="sr-only">Langue</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><select id="lang" data-base="../"><option value="en">English</option><option value="es">Español</option><option value="fr" selected>Français</option><option value="de">Deutsch</option><option value="pt">Português</option><option value="it">Italiano</option><option value="nl">Nederlands</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="zh">简体中文</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="ru">Русский</option><option value="tr">Türkçe</option><option value="id">Bahasa Indonesia</option></select></label>
+    <button class="btn btn-primary btn-sm header-cta" data-action="pick">Importer une photo</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Détourage IA · 100 % dans votre navigateur</p>
+        <h1>Le fond disparaît.<br><em>Votre sujet reste.</em></h1>
+        <p class="lead">Importez une photo : l'arrière-plan est retiré automatiquement. Corrigez les détails au pinceau, posez un nouveau fond, améliorez les couleurs, puis téléchargez.</p>
+        <ul class="hero-points">
+          <li>Gratuit en qualité standard</li>
+          <li>Vos photos restent sur votre appareil</li>
+          <li>Sans inscription</li>
+        </ul>
+      </div>
+
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Glissez une image ici">
+        <div class="dropzone-inner">
+          <div class="dz-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="48" height="48"><path d="M24 31V13m0 0-7 7m7-7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 30v5a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4v-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <p class="dz-title">Glissez une image ici</p>
+          <p class="dz-sub">ou</p>
+          <span class="btn btn-primary">Choisir une photo</span>
+          <p class="dz-hint">JPG, PNG ou WEBP · collez aussi avec Ctrl+V</p>
+        </div>
+        <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/avif,image/gif,image/bmp" hidden>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <div class="feature-ico ico-cut" aria-hidden="true"></div>
+        <h2>Détourage automatique</h2>
+        <p>Personnes, produits, animaux, objets : le sujet est isolé en quelques secondes, cheveux et contours fins compris.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-brush" aria-hidden="true"></div>
+        <h2>Affinage au pinceau</h2>
+        <p>Une gomme pour enlever ce qui reste, un pinceau pour restaurer ce qui a disparu, et un lissage des bords réglable.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-bg" aria-hidden="true"></div>
+        <h2>Nouveaux fonds</h2>
+        <p>Transparent, couleur unie, dégradé, votre propre image ou un flou de l'original, avec ombre portée en option.</p>
+      </article>
+      <article class="feature">
+        <div class="feature-ico ico-spark" aria-hidden="true"></div>
+        <h2>Amélioration</h2>
+        <p>Correction automatique en un clic, plus luminosité, contraste, saturation, température et netteté.</p>
+      </article>
+    </section>
+
+    <section class="how" id="how">
+      <h2 class="section-title">Comment ça marche</h2>
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>Importez</h3><p>Glissez, collez ou choisissez une photo depuis votre appareil.</p></li>
+        <li><span class="step-n">2</span><h3>Ajustez</h3><p>Le fond est retiré tout seul. Retouchez si besoin, choisissez un fond.</p></li>
+        <li><span class="step-n">3</span><h3>Téléchargez</h3><p>PNG transparent, JPG ou WEBP, recadré sur le sujet si vous voulez.</p></li>
+      </ol>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2 class="section-title">Tarifs</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Gratuit</h3>
+          <p class="price">0 €</p>
+          <ul>
+            <li>Détourage illimité</li>
+            <li>Retouche, fonds et amélioration</li>
+            <li>Téléchargement jusqu'à 1500 px</li>
+          </ul>
+          <button class="btn btn-ghost" data-action="pick">Commencer</button>
+        </div>
+        <div class="plan plan-hd">
+          <span class="badge">Bientôt</span>
+          <h3>Packs HD</h3>
+          <p class="price">Crédits</p>
+          <ul>
+            <li>Résolution d'origine</li>
+            <li>Agrandissement IA ×2 et ×4</li>
+            <li>1 crédit = 1 image HD, sans abonnement</li>
+          </ul>
+          <button class="btn btn-ghost" data-action="hd-info">En savoir plus</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <details><summary>Mes photos sont-elles envoyées sur un serveur ?</summary><p>Non. Le détourage et les retouches sont calculés par votre navigateur, sur votre appareil. Aucune image n'est transmise ni stockée par le site.</p></details>
+      <details><summary>Pourquoi le premier détourage est-il plus long ?</summary><p>La première fois, votre navigateur télécharge le modèle d'IA (environ 45 à 90 Mo selon la qualité). Il est ensuite gardé en cache, et les détourages suivants sont bien plus rapides.</p></details>
+      <details><summary>Le résultat n'est pas parfait, que faire ?</summary><p>Ouvrez l'onglet Retoucher : la gomme enlève les restes de fond, le pinceau Restaurer fait revenir les parties effacées par erreur, et le lissage adoucit les bords.</p></details>
+      <details><summary>Quels formats puis-je télécharger ?</summary><p>PNG (avec transparence), JPG et WEBP. Choisissez PNG pour garder un fond transparent.</p></details>
+      <details><summary>Est-ce que ça marche sur téléphone ?</summary><p>Oui, sur un navigateur récent. Sur téléphone, le modèle de qualité standard est utilisé par défaut pour limiter le téléchargement.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bgone</p>
+    <nav>
+      <a href="../legal.html">Mentions légales</a>
+      <a href="../privacy.html">Confidentialité</a>
+      <a href="../licenses.html">Licences et code source</a>
+    </nav>
+  </footer>
+
+  <!-- ===================== EDITOR ===================== -->
+  <div class="editor" id="editor" hidden>
+    <div class="ed-top">
+      <button class="icon-btn" data-action="close" title="Nouvelle image" aria-label="Nouvelle image">
+        <svg class="flip-rtl" viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span class="ed-brand">Bgone</span>
+      <div class="ed-top-mid">
+        <button class="icon-btn" data-action="undo" title="Annuler (Ctrl+Z)" aria-label="Annuler" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" data-action="redo" title="Rétablir (Ctrl+Shift+Z)" aria-label="Rétablir" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="m15 14 5-5-5-5M20 9H10a6 6 0 0 0 0 12h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn compare-btn" data-action="compare" title="Maintenir pour voir l'original" aria-label="Maintenir pour voir l'original">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3v18M5 6h4v12H5zM15 6h4v12h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span>Avant / après</span>
+        </button>
+      </div>
+      <button class="btn btn-primary btn-sm" data-action="download" disabled>Télécharger</button>
+    </div>
+
+    <div class="ed-body">
+      <div class="stage" id="stage">
+        <div class="canvas-wrap" id="canvas-wrap">
+          <canvas id="view"></canvas>
+        </div>
+        <div class="brush-cursor" id="brush-cursor" hidden></div>
+        <div class="processing" id="processing" hidden>
+          <div class="proc-card">
+            <div class="proc-spinner" aria-hidden="true"></div>
+            <p class="proc-title" id="proc-title">Détourage en cours…</p>
+            <div class="proc-bar"><div class="proc-fill" id="proc-fill"></div></div>
+            <p class="proc-sub" id="proc-sub"></p>
+          </div>
+        </div>
+        <div class="zoom-ctrl">
+          <button class="icon-btn" data-action="zoom-out" aria-label="Dézoomer">−</button>
+          <button class="zoom-label" data-action="zoom-fit" id="zoom-label" title="Ajuster à l'écran">100 %</button>
+          <button class="icon-btn" data-action="zoom-in" aria-label="Zoomer">+</button>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel">
+        <div class="tabs" role="tablist">
+          <button role="tab" class="tab is-active" data-tab="bg" aria-selected="true">Fond</button>
+          <button role="tab" class="tab" data-tab="retouch" aria-selected="false">Retoucher</button>
+          <button role="tab" class="tab" data-tab="enhance" aria-selected="false">Améliorer</button>
+        </div>
+
+        <div class="tab-pane" data-pane="bg">
+          <h3 class="pane-h">Couleur</h3>
+          <div class="swatches" id="swatches"></div>
+          <h3 class="pane-h">Dégradés</h3>
+          <div class="swatches" id="gradients"></div>
+          <h3 class="pane-h">Image</h3>
+          <div class="bg-image-row">
+            <button class="chip" data-action="bg-blur">Flouter l'original</button>
+            <label class="chip">Ma propre image<input type="file" id="bg-file" accept="image/*" hidden></label>
+          </div>
+          <label class="row-toggle"><input type="checkbox" id="shadow"> Ombre portée sous le sujet</label>
+        </div>
+
+        <div class="tab-pane" data-pane="retouch" hidden>
+          <div class="tool-row" role="radiogroup">
+            <button class="tool" data-tool="erase" role="radio" aria-checked="false">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="m7 21-4-4L14 6l7 7-8 8H7zM10 10l7 7M21 21H11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Effacer
+            </button>
+            <button class="tool" data-tool="restore" role="radio" aria-checked="false">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M18 3a3 3 0 0 1 3 3c0 2-6 8-8 10l-3-3c2-2 8-10 8-10zM9.5 13.5 10 14c0 3-2 6-7 6 1-1 1.5-2.5 1.5-4a3 3 0 0 1 5-2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Restaurer
+            </button>
+            <button class="tool is-active" data-tool="pan" role="radio" aria-checked="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12m0-6.5v-1a1.5 1.5 0 0 1 3 0V12m0-6a1.5 1.5 0 0 1 3 0v6m0-3a1.5 1.5 0 0 1 3 0v5a7 7 0 0 1-7 7h-1.5a6 6 0 0 1-5-2.7L4 14.5a1.6 1.6 0 0 1 2.6-1.8L8 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Déplacer
+            </button>
+          </div>
+          <label class="slider"><span>Taille du pinceau <output id="o-size">40</output></span><input type="range" id="brush-size" min="4" max="300" value="40"></label>
+          <label class="slider"><span>Dureté <output id="o-hard">70</output></span><input type="range" id="brush-hard" min="0" max="100" value="70"></label>
+          <label class="row-toggle"><input type="checkbox" id="ghost" checked> Montrer l'original en transparence</label>
+          <hr>
+          <h3 class="pane-h">Bords</h3>
+          <label class="slider"><span>Lissage <output id="o-feather">0</output></span><input type="range" id="feather" min="0" max="20" value="0"></label>
+          <label class="slider"><span>Contour (rétrécir / élargir) <output id="o-shift">0</output></span><input type="range" id="shift" min="-10" max="10" value="0"></label>
+          <hr>
+          <div class="btn-col">
+            <button class="btn btn-ghost btn-sm" data-action="reset-mask">Revenir au détourage automatique</button>
+            <button class="btn btn-ghost btn-sm" data-action="rerun-precise" id="rerun-precise">Relancer en précision maximale</button>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-pane="enhance" hidden>
+          <button class="btn btn-primary btn-block" data-action="auto-enhance">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" fill="currentColor"/></svg>
+            Amélioration automatique
+          </button>
+          <label class="slider"><span>Luminosité <output id="o-bright">0</output></span><input type="range" id="bright" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Contraste <output id="o-contrast">0</output></span><input type="range" id="contrast" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Saturation <output id="o-sat">0</output></span><input type="range" id="sat" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Température <output id="o-warm">0</output></span><input type="range" id="warm" min="-100" max="100" value="0"></label>
+          <label class="slider"><span>Netteté <output id="o-sharp">0</output></span><input type="range" id="sharp" min="0" max="100" value="0"></label>
+          <button class="btn btn-ghost btn-sm" data-action="reset-enhance">Réinitialiser les réglages</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <dialog class="modal" id="dl-modal">
+    <form method="dialog" class="modal-card">
+      <h2>Télécharger</h2>
+      <fieldset class="seg">
+        <legend>Format</legend>
+        <label><input type="radio" name="fmt" value="png" checked><span>PNG</span></label>
+        <label><input type="radio" name="fmt" value="jpg"><span>JPG</span></label>
+        <label><input type="radio" name="fmt" value="webp"><span>WEBP</span></label>
+      </fieldset>
+      <label class="row-toggle"><input type="checkbox" id="crop"> Recadrer sur le sujet</label>
+      <p class="fmt-note" id="fmt-note"></p>
+      <div class="dl-options">
+        <button class="dl-opt" value="std" id="dl-std">
+          <strong>Standard</strong>
+          <span id="dl-std-size"></span>
+          <em>Gratuit</em>
+        </button>
+        <button class="dl-opt dl-hd" value="hd" id="dl-hd">
+          <strong>HD</strong>
+          <span id="dl-hd-size"></span>
+          <em>Bientôt · crédits</em>
+        </button>
+      </div>
+      <button class="modal-x" value="cancel" aria-label="Fermer">×</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="hd-modal">
+    <form method="dialog" class="modal-card">
+      <h2>HD : bientôt disponible</h2>
+      <p>Le téléchargement HD vous donnera votre image en résolution d'origine, avec un agrandissement IA ×2 ou ×4 pour l'impression et les grands écrans.</p>
+      <p>Il fonctionnera avec des packs de crédits, sans abonnement : 1 crédit = 1 image HD.</p>
+      <p class="muted">En attendant, le téléchargement standard est gratuit.</p>
+      <button class="btn btn-primary" value="ok">Compris</button>
+      <button class="modal-x" value="cancel" aria-label="Fermer">×</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="application/json" id="i18n">{"bg_color":"Couleur","bg_gradients":"Dégradés","bg_image":"Image","bg_blur":"Flouter l'original","bg_own":"Ma propre image","bg_shadow":"Ombre portée sous le sujet","bg_transparent":"Transparent","bg_custom":"Couleur personnalisée","dl_format":"Format","dl_crop":"Recadrer sur le sujet","dl_std":"Standard","dl_free":"Gratuit","dl_hd_soon":"Bientôt · crédits","dl_upto":"jusqu'à {w} × {h} px","dl_jpg_note":"Le JPG ne gère pas la transparence : le fond sera blanc.","dl_png_note":"Fond transparent conservé.","js_preparing":"Préparation de l'IA…","js_download_once":"Téléchargement unique : {a} / {b} Mo","js_removing":"Détourage en cours…","js_analyzing":"Analyse de l'image","js_edges":"Finition des contours","js_starting":"Démarrage du moteur","js_not_image":"Ce fichier n'est pas une image.","js_cant_read":"Impossible de lire cette image. Essayez en JPG ou PNG (les photos HEIC d'iPhone ne sont pas lues par tous les navigateurs).","js_done":"Arrière-plan supprimé en {s} s","js_failed":"Le détourage a échoué : {e}. Essayez un navigateur récent (Chrome, Edge, Firefox, Safari).","js_enhanced":"Amélioration automatique appliquée","js_export_fail":"Export impossible dans ce navigateur.","js_downloaded":"Image téléchargée ({w} × {h} px)","js_mask_reset":"Détourage automatique rétabli","js_bg_fail":"Impossible de lire cette image de fond."}</script>
+  <script type="module" src="../assets/app.js"></script>
+</body>
+</html>
