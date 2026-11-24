@@ -893,5 +893,44 @@ buildSwatches();
 setTool('pan');
 $('#year').textContent = new Date().getFullYear();
 
+/* =================== HD payant (voir assets/hd.js) =================== */
+// L'image (sans masque) part au serveur pour être agrandie ×4 ; le masque, le fond
+// et l'ombre sont ensuite réappliqués ici, à la grande taille.
+const HD_IN_MAX = 1440;  // taille max envoyée (recommandation de Real-ESRGAN)
+function hdSource(doCrop) {
+  if (!S.ready) return null;
+  const crop = doCrop ? subjectBBox() : null;
+  const r = crop || { x: 0, y: 0, w: S.W, h: S.H };
+  const k = Math.min(1, HD_IN_MAX / Math.max(r.w, r.h));
+  const c = makeCanvas(Math.max(1, Math.round(r.w * k)), Math.max(1, Math.round(r.h * k)));
+  const x = c.getContext('2d'); x.imageSmoothingQuality = 'high';
+  x.drawImage(S.adjusted, r.x, r.y, r.w, r.h, 0, 0, c.width, c.height);
+  return { canvas: c, rect: r };
+}
+function hdCompose(up, src, fmt) {
+  const w = up.width, h = up.height, r = src.rect;
+  const sub = makeCanvas(w, h);
+  const sx = sub.getContext('2d'); sx.imageSmoothingQuality = 'high';
+  sx.drawImage(effectiveMask(), r.x, r.y, r.w, r.h, 0, 0, w, h);
+  sx.globalCompositeOperation = 'source-in';
+  sx.drawImage(up, 0, 0, w, h);
+  const out = makeCanvas(w, h);
+  const ctx = out.getContext('2d'); ctx.imageSmoothingQuality = 'high';
+  paintBackground(ctx, w, h, fmt === 'jpg');
+  if (S.shadow) {
+    const s = Math.max(w, h) / 1000;
+    ctx.shadowColor = 'rgba(0,0,0,0.35)'; ctx.shadowBlur = 28 * s; ctx.shadowOffsetY = 14 * s;
+  }
+  ctx.drawImage(sub, 0, 0);
+  return out;
+}
+window.poppixHD = {
+  source: hdSource, compose: hdCompose, toast, brand: BRAND,
+  get fileName() { return S.fileName; },
+  get fmt() { return $('input[name=fmt]:checked').value; },
+  get crop() { return $('#crop').checked; },
+};
+import('./hd.js').catch(() => {});
+
 // Pour les tests automatisés
 window.__zf = { S, loadFile };
