@@ -13,6 +13,7 @@
 AddType application/wasm .wasm
 AddType text/javascript .mjs .js
 AddType application/octet-stream .bin
+AddType application/manifest+json .webmanifest
 
 # Cache : le modèle IA (~45 à 90 Mo) n'est téléchargé qu'une seule fois par visiteur.
 <IfModule mod_expires.c>
