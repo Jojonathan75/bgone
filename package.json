@@ -5,10 +5,17 @@
   "description": "Poppix : détourage d'images dans le navigateur",
   "scripts": {
     "build": "esbuild src/worker.js --bundle --format=esm --minify --outfile=site/assets/worker.js && node tools/copy-ort.mjs && node tools/build-i18n.mjs",
-    "serve": "node tools/serve.mjs"
+    "serve": "node tools/serve.mjs",
+    "build-compress": "node tools/build-compress.mjs"
   },
   "dependencies": {
+    "@jsquash/avif": "2.1.1",
+    "@jsquash/jpeg": "1.6.0",
+    "@jsquash/oxipng": "2.3.0",
+    "@jsquash/webp": "1.5.0",
+    "@okathira/ghostpdl-wasm": "1.1.0",
     "esbuild": "^0.24.0",
-    "onnxruntime-web": "1.21.0"
+    "onnxruntime-web": "1.21.0",
+    "upng-js": "2.1.0"
   }
 }

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}" data-brand="{{brand}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{cp_meta_title}} · {{brand}}</title>
+  <meta name="description" content="{{cp_meta_desc}}">
+  <meta name="theme-color" content="#101418">
+  <link rel="canonical" href="{{canonical}}">
+  <link rel="icon" href="{{base}}favicon.ico" sizes="any">
+  <link rel="icon" href="{{base}}assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{base}}assets/apple-touch-icon.png">
+  <link rel="manifest" href="{{base}}site.webmanifest">
+  <link rel="stylesheet" href="{{base}}assets/styles.css">
+  <link rel="stylesheet" href="{{base}}assets/compress/tools.css">
+  <meta property="og:title" content="{{cp_meta_title}} · {{brand}}">
+  <meta property="og:description" content="{{cp_meta_desc}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{site_url}}/assets/og-image.png">
+{{alternates}}
+{{jsonld}}
+{{redirect}}
+</head>
+<body data-tool="pdf" data-slug="{{slug}}">
+{{header}}
+
+  <main class="tool-page">
+    <section class="tool-hero">
+      <p class="eyebrow">{{cp_eyebrow}}</p>
+      <h1>{{cp_h1a}} <em>{{cp_h1b}}</em></h1>
+      <p class="lead">{{cp_lead}}</p>
+    </section>
+
+    <section class="tool-card" id="tool">
+      <div class="tool-main">
+        <div class="dropzone tool-drop" id="dropzone" tabindex="0" role="button" aria-label="{{cp_drop}}">
+          <div class="dropzone-inner">
+            <div class="dz-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="44" height="44"><path d="M13 6h15l9 9v25a3 3 0 0 1-3 3H13a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M28 6v9h9M17 26h14M17 32h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <p class="dz-title">{{cp_drop}}</p>
+            <p class="dz-sub">{{dz_or}}</p>
+            <span class="btn btn-primary">{{cp_choose}}</span>
+            <p class="dz-hint">{{cp_hint}}</p>
+          </div>
+          <input type="file" id="file-input" multiple accept="application/pdf,.pdf" hidden>
+        </div>
+
+        <div class="results" id="results" hidden>
+          <div class="results-head">
+            <p class="results-total" id="total"></p>
+            <div class="results-actions">
+              <button class="btn btn-ghost btn-sm" data-action="add">{{tl_add}}</button>
+              <button class="btn btn-ghost btn-sm" data-action="clear">{{tl_clear}}</button>
+              <button class="btn btn-primary btn-sm" data-action="zip" disabled>{{tl_zip}}</button>
+            </div>
+          </div>
+          <ul class="file-list" id="file-list"></ul>
+        </div>
+      </div>
+
+      <aside class="tool-settings">
+        <fieldset class="levels" id="level">
+          <legend>{{cp_level}}</legend>
+          <label class="level"><input type="radio" name="level" value="light"><span><strong>{{cp_l_light}}</strong><small>{{cp_l_light_d}}</small></span></label>
+          <label class="level"><input type="radio" name="level" value="medium" checked><span><strong>{{cp_l_medium}}</strong><small>{{cp_l_medium_d}}</small></span></label>
+          <label class="level"><input type="radio" name="level" value="strong"><span><strong>{{cp_l_strong}}</strong><small>{{cp_l_strong_d}}</small></span></label>
+          <label class="level level-warn"><input type="radio" name="level" value="raster"><span><strong>{{cp_l_raster}}</strong><small>{{cp_l_raster_d}}</small></span></label>
+        </fieldset>
+        <p class="hint">{{cp_engine_note}}</p>
+        <p class="hint hint-privacy">{{cp_privacy}}</p>
+      </aside>
+    </section>
+
+    <section class="how">
+      <h2 class="section-title">{{cp_how}}</h2>
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>{{cps1_t}}</h3><p>{{cps1_d}}</p></li>
+        <li><span class="step-n">2</span><h3>{{cps2_t}}</h3><p>{{cps2_d}}</p></li>
+        <li><span class="step-n">3</span><h3>{{cps3_t}}</h3><p>{{cps3_d}}</p></li>
+      </ol>
+    </section>
+
+    <section class="faq">
+      <h2 class="section-title">{{faq_title}}</h2>
+      <details><summary>{{cpq1}}</summary><p>{{cpa1}}</p></details>
+      <details><summary>{{cpq2}}</summary><p>{{cpa2}}</p></details>
+      <details><summary>{{cpq3}}</summary><p>{{cpa3}}</p></details>
+      <details><summary>{{cpq4}}</summary><p>{{cpa4}}</p></details>
+    </section>
+
+{{moretools}}
+  </main>
+
+{{footer}}
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script type="application/json" id="i18n">{{i18njson}}</script>
+  <script type="module" src="{{base}}assets/compress/ui.js"></script>
+</body>
+</html>

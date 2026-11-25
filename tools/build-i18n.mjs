@@ -17,6 +17,11 @@ const HREFLANG = { zh: 'zh-Hans' };
 const tpl = fs.readFileSync('src/template.html', 'utf8');
 const dicts = {};
 for (const code of ORDER) dicts[code] = JSON.parse(fs.readFileSync(`src/i18n/${code}.json`, 'utf8'));
+// Textes des outils de compression (src/i18n/tools/) : fusionnés avec ceux de la page principale
+for (const code of ORDER) {
+  const f = `src/i18n/tools/${code}.json`;
+  dicts[code] = { ...dicts[code], ...(fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {}) };
+}
 const en = dicts.en;
 
 // Contrôle : toutes les clés anglaises doivent exister partout
@@ -56,10 +61,14 @@ for (const code of ORDER) {
   fs.writeFileSync(out, html);
 }
 
+// Pages des outils (compression d'images, de PDF) : une page par outil et par langue
+const TOOL_PAGES = await import('./build-tools.mjs').then(m => m.buildTools({ ORDER, RTL, HREFLANG, dicts, BRAND, SITE_URL, esc }));
+
 // Plan du site pour Google
+const sitemapGroup = (url) => ORDER.map(c => `  <url><loc>${url(c)}</loc>\n${ORDER.map(a => `    <xhtml:link rel="alternate" hreflang="${HREFLANG[a] || a}" href="${url(a)}"/>`).join('\n')}\n  </url>`).join('\n');
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${ORDER.map(c => `  <url><loc>${urlFor(c)}</loc>\n${ORDER.map(a => `    <xhtml:link rel="alternate" hreflang="${HREFLANG[a] || a}" href="${urlFor(a)}"/>`).join('\n')}\n  </url>`).join('\n')}
+${[urlFor, ...TOOL_PAGES].map(sitemapGroup).join('\n')}
 </urlset>
 `;
 fs.writeFileSync('site/sitemap.xml', sitemap);

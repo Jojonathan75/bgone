@@ -15,6 +15,13 @@ Site **100 % statique** : le détourage IA tourne dans le navigateur du visiteur
 - `src/worker.js` : source du moteur
 - `tools/` : scripts de construction et serveur de test local
 
+## Outils de compression (images et PDF)
+- Pages : `site/compress-image/` et `site/compress-pdf/` (et `site/<langue>/compress-…/`), générées par `node tools/build-i18n.mjs` à partir de `src/tools/*.html` et des textes `src/i18n/tools/<langue>.json`.
+- Interface : `site/assets/compress/ui.js` et `tools.css` (écrits à la main).
+- Moteurs : `site/assets/compress/image-worker.js` et `pdf-worker.js` sont **générés** depuis `src/compress/` par `npm install` puis `node tools/build-compress.mjs`, qui copie aussi les fichiers WebAssembly dans `site/vendor/`.
+- Images : MozJPEG, WebP, AVIF (jSquash, Apache 2.0), OxiPNG, UPNG.js. PDF : Ghostscript en WebAssembly (AGPL, ~15 Mo, téléchargé seulement sur la page PDF).
+- Tout tourne dans le navigateur, aucun fichier n'est envoyé.
+
 ## Tester sur son ordinateur
 Il faut Node.js. Dans ce dossier :
 ```
