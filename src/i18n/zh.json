@@ -125,5 +125,11 @@
  "js_downloaded": "图片已下载（{w} × {h} 像素）",
  "js_mask_reset": "已恢复自动抠图结果",
  "js_bg_fail": "无法读取此背景图片。",
- "lang_label": "语言"
+ "lang_label": "语言",
+ "foot_about": "关于我们",
+ "foot_guides": "指南",
+ "foot_contact": "联系我们",
+ "foot_terms": "使用条款",
+ "foot_sales": "销售条款",
+ "foot_cookies": "Cookie 政策"
 }

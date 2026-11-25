@@ -125,5 +125,11 @@
  "js_downloaded": "Görsel indirildi ({w} × {h} px)",
  "js_mask_reset": "Otomatik kesim geri yüklendi",
  "js_bg_fail": "Bu arka plan görseli okunamadı.",
- "lang_label": "Dil"
+ "lang_label": "Dil",
+ "foot_about": "Hakkımızda",
+ "foot_guides": "Rehberler",
+ "foot_contact": "İletişim",
+ "foot_terms": "Kullanım koşulları",
+ "foot_sales": "Satış koşulları",
+ "foot_cookies": "Çerezler"
 }

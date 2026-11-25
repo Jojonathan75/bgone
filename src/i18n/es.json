@@ -125,5 +125,11 @@
  "js_downloaded": "Imagen descargada ({w} × {h} px)",
  "js_mask_reset": "Recorte automático restaurado",
  "js_bg_fail": "No se puede leer esta imagen de fondo.",
- "lang_label": "Idioma"
+ "lang_label": "Idioma",
+ "foot_about": "Acerca de",
+ "foot_guides": "Guías",
+ "foot_contact": "Contacto",
+ "foot_terms": "Condiciones de uso",
+ "foot_sales": "Condiciones de venta",
+ "foot_cookies": "Cookies"
 }

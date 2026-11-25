@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transparent PNG: what it is and how to make one · Poppix</title><meta name="description" content="What a transparent background really is, which formats support it, and how to create and keep a transparent PNG.">
+<link rel="canonical" href="https://poppix.app/guides/transparent-png.html"><link rel="alternate" hreflang="en" href="https://poppix.app/guides/transparent-png.html"><link rel="alternate" hreflang="fr" href="https://poppix.app/fr/guides/png-transparent.html">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/styles.css"></head>
+<body><header class="site-header"><a class="brand" href="../"><img class="brand-logo" src="../assets/logo-40.png" srcset="../assets/logo-80.png 2x" width="43" height="40" alt=""><span class="brand-name">Poppix</span></a><a class="btn btn-primary btn-sm page-cta" href="../">Remove a background</a></header>
+<main class="legal">
+<h1>Transparent PNG: what it is and how to make one</h1>
+<p class="lead">A “transparent background” is not white and not a checkerboard: it is the absence of pixels. Here is how it works and how to avoid the most common mistakes.</p>
+
+<h2>What transparency means in an image</h2>
+<p>Each pixel of a digital image has three colour values (red, green, blue). Some formats add a fourth value called the <strong>alpha channel</strong>, which says how opaque the pixel is: 0 means invisible, 255 means fully visible, and anything in between is partly see-through. Good cutouts use these intermediate values on the edges, so hair or soft shadows blend naturally into any new background.</p>
+
+<h2>Which formats support it</h2>
+<ul>
+<li><strong>PNG:</strong> full transparency, lossless. The safe choice for logos, stickers and cutouts.</li>
+<li><strong>WEBP:</strong> supports transparency with much smaller files. Perfect for websites, less supported by older software.</li>
+<li><strong>JPG:</strong> no transparency at all. If you save a cutout as JPG, the transparent area becomes a solid colour (usually white or black).</li>
+<li><strong>GIF:</strong> only all-or-nothing transparency, which gives rough edges. Avoid it for photos.</li>
+</ul>
+
+<h2>How to make a transparent PNG</h2>
+<ol>
+<li>Open your image in <a href="../">Poppix</a>. The background is removed automatically.</li>
+<li>In the <em>Background</em> tab, keep the checkerboard swatch selected: it means “transparent”.</li>
+<li>Click <em>Download</em> and choose <strong>PNG</strong> (or WEBP).</li>
+</ol>
+
+<h2>The fake checkerboard trap</h2>
+<p>Many images found online show a grey and white checkerboard but are not transparent at all: the checkerboard is printed into the pixels. You can spot it when the squares look slightly wavy, blurry, or move when you zoom. If you place such an image on a coloured background, the checkerboard appears. The fix is to cut it out again, as you would any other background.</p>
+
+<h2>Keeping transparency intact</h2>
+<ul>
+<li>Some messaging apps and social networks convert images to JPG and replace transparency with black or white. Send the file as a document to keep it.</li>
+<li>When you edit the PNG in another program, export it again as PNG, not JPG.</li>
+<li>Check the result by placing the image on a dark and a light background: edges should look clean on both.</li>
+</ul>
+
+</main>
+<footer class="site-footer"><p>© 2026 Poppix</p><nav><a href="../about.html">About</a><a href="../guides/">Guides</a><a href="../contact.html">Contact</a><a href="../terms.html">Terms of use</a><a href="../sales.html">Terms of sale</a><a href="../privacy.html">Privacy</a><a href="../cookies.html">Cookies</a><a href="../legal.html">Legal notice</a><a href="../licenses.html">Licenses</a></nav></footer>
+</body></html>

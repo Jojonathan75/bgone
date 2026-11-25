@@ -255,4 +255,16 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://poppix.app/tr/"/>
     <xhtml:link rel="alternate" hreflang="id" href="https://poppix.app/id/"/>
   </url>
+  <url><loc>https://poppix.app/about.html</loc></url>
+  <url><loc>https://poppix.app/contact.html</loc></url>
+  <url><loc>https://poppix.app/fr/guides/cheveux-et-bords.html</loc></url>
+  <url><loc>https://poppix.app/fr/guides/fond-blanc.html</loc></url>
+  <url><loc>https://poppix.app/fr/guides/</loc></url>
+  <url><loc>https://poppix.app/fr/guides/photo-produit.html</loc></url>
+  <url><loc>https://poppix.app/fr/guides/png-transparent.html</loc></url>
+  <url><loc>https://poppix.app/guides/hair-and-edges.html</loc></url>
+  <url><loc>https://poppix.app/guides/</loc></url>
+  <url><loc>https://poppix.app/guides/product-photos.html</loc></url>
+  <url><loc>https://poppix.app/guides/transparent-png.html</loc></url>
+  <url><loc>https://poppix.app/guides/white-background.html</loc></url>
 </urlset>

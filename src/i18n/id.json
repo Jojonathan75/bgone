@@ -125,5 +125,11 @@
  "js_downloaded": "Gambar diunduh ({w} × {h} px)",
  "js_mask_reset": "Potongan otomatis dipulihkan",
  "js_bg_fail": "Gambar latar ini tidak bisa dibaca.",
- "lang_label": "Bahasa"
+ "lang_label": "Bahasa",
+ "foot_about": "Tentang",
+ "foot_guides": "Panduan",
+ "foot_contact": "Kontak",
+ "foot_terms": "Ketentuan penggunaan",
+ "foot_sales": "Ketentuan penjualan",
+ "foot_cookies": "Cookie"
 }

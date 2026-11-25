@@ -125,5 +125,11 @@
  "js_downloaded": "Bild heruntergeladen ({w} × {h} px)",
  "js_mask_reset": "Automatische Freistellung wiederhergestellt",
  "js_bg_fail": "Dieses Hintergrundbild kann nicht gelesen werden.",
- "lang_label": "Sprache"
+ "lang_label": "Sprache",
+ "foot_about": "Über uns",
+ "foot_guides": "Ratgeber",
+ "foot_contact": "Kontakt",
+ "foot_terms": "Nutzungsbedingungen",
+ "foot_sales": "Verkaufsbedingungen",
+ "foot_cookies": "Cookies"
 }

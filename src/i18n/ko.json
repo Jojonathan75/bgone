@@ -125,5 +125,11 @@
  "js_downloaded": "이미지를 다운로드했습니다 ({w} × {h} px)",
  "js_mask_reset": "자동 누끼로 되돌렸습니다",
  "js_bg_fail": "이 배경 이미지를 읽을 수 없습니다.",
- "lang_label": "언어"
+ "lang_label": "언어",
+ "foot_about": "소개",
+ "foot_guides": "가이드",
+ "foot_contact": "문의",
+ "foot_terms": "이용약관",
+ "foot_sales": "판매약관",
+ "foot_cookies": "쿠키"
 }

@@ -125,5 +125,11 @@
  "js_downloaded": "تم تنزيل الصورة ({w} × {h} بكسل)",
  "js_mask_reset": "تمت استعادة القص التلقائي",
  "js_bg_fail": "تعذّرت قراءة صورة الخلفية هذه.",
- "lang_label": "اللغة"
+ "lang_label": "اللغة",
+ "foot_about": "من نحن",
+ "foot_guides": "أدلة",
+ "foot_contact": "اتصل بنا",
+ "foot_terms": "شروط الاستخدام",
+ "foot_sales": "شروط البيع",
+ "foot_cookies": "ملفات تعريف الارتباط"
 }

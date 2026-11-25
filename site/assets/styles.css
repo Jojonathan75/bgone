@@ -305,3 +305,15 @@ body:has(.editor:not([hidden])) .toast { top: 70px; bottom: auto; }
 :lang(ar) body, :lang(ar) button, :lang(ar) select { font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", var(--font); }
 :lang(hi) body, :lang(hi) button, :lang(hi) select { font-family: "Nirmala UI", "Noto Sans Devanagari", "Kohinoor Devanagari", var(--font); }
 :lang(ar) h1, :lang(hi) h1 { line-height: 1.25; }
+
+/* ---------- Pages annexes ---------- */
+.page-cta { margin-inline-start: auto; }
+.legal { margin: 0 auto; }
+.legal ul, .legal ol { padding-inline-start: 22px; }
+.legal li { margin: 6px 0; }
+.legal .lead { font-size: 18px; color: var(--ink-2); }
+.legal .note { background: var(--panel, #fff); border: 1px solid var(--line, #e6e2da); border-radius: 12px; padding: 14px 16px; }
+.legal .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); padding: 0; list-style: none; }
+.legal .cards li { margin: 0; border: 1px solid var(--line, #e6e2da); border-radius: 14px; padding: 16px; background: #fff; }
+.legal .cards a { font-weight: 700; text-decoration: none; color: var(--ink); }
+.legal hr { border: 0; border-top: 1px solid var(--line, #e6e2da); margin: 40px 0; }

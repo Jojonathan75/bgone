@@ -125,5 +125,11 @@
  "js_downloaded": "Изображение скачано ({w} × {h} px)",
  "js_mask_reset": "Автоматическая вырезка восстановлена",
  "js_bg_fail": "Не удалось прочитать фоновое изображение.",
- "lang_label": "Язык"
+ "lang_label": "Язык",
+ "foot_about": "О сервисе",
+ "foot_guides": "Руководства",
+ "foot_contact": "Контакты",
+ "foot_terms": "Условия использования",
+ "foot_sales": "Условия продажи",
+ "foot_cookies": "Cookie"
 }

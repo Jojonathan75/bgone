@@ -125,5 +125,11 @@
  "js_downloaded": "Afbeelding gedownload ({w} × {h} px)",
  "js_mask_reset": "Automatische uitsnede hersteld",
  "js_bg_fail": "Deze achtergrondafbeelding kan niet worden gelezen.",
- "lang_label": "Taal"
+ "lang_label": "Taal",
+ "foot_about": "Over ons",
+ "foot_guides": "Handleidingen",
+ "foot_contact": "Contact",
+ "foot_terms": "Gebruiksvoorwaarden",
+ "foot_sales": "Verkoopvoorwaarden",
+ "foot_cookies": "Cookies"
 }

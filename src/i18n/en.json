@@ -125,5 +125,11 @@
  "js_downloaded": "Image downloaded ({w} × {h} px)",
  "js_mask_reset": "Automatic cutout restored",
  "js_bg_fail": "Can't read this background image.",
- "lang_label": "Language"
+ "lang_label": "Language",
+ "foot_about": "About",
+ "foot_guides": "Guides",
+ "foot_contact": "Contact",
+ "foot_terms": "Terms of use",
+ "foot_sales": "Terms of sale",
+ "foot_cookies": "Cookies"
 }

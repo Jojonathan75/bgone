@@ -125,5 +125,11 @@
  "js_downloaded": "Immagine scaricata ({w} × {h} px)",
  "js_mask_reset": "Scontorno automatico ripristinato",
  "js_bg_fail": "Impossibile leggere questa immagine di sfondo.",
- "lang_label": "Lingua"
+ "lang_label": "Lingua",
+ "foot_about": "Chi siamo",
+ "foot_guides": "Guide",
+ "foot_contact": "Contatti",
+ "foot_terms": "Condizioni d'uso",
+ "foot_sales": "Condizioni di vendita",
+ "foot_cookies": "Cookie"
 }

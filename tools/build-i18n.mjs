@@ -41,7 +41,7 @@ for (const code of ORDER) {
   const langselect = `<label class="lang-select"><span class="sr-only">${esc(d.lang_label)}</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><select id="lang" data-base="${base}">${options}</select></label>`;
   const jsKeys = Object.fromEntries(Object.entries(d).filter(([k]) => k.startsWith('js_') || k.startsWith('dl_') || k.startsWith('bg_')));
   const vars = {
-    lang: code, dir: RTL.has(code) ? 'rtl' : 'ltr', brand: esc(BRAND), base, site_url: SITE_URL,
+    lang: code, dir: RTL.has(code) ? 'rtl' : 'ltr', brand: esc(BRAND), base, site_url: SITE_URL, guides: base + (code === 'fr' ? 'fr/guides/' : 'guides/'),
     alternates, redirect: code === 'en' ? redirect : '', langselect,
     i18njson: JSON.stringify(jsKeys).replace(/</g, '\\u003c'),
   };
@@ -65,11 +65,59 @@ ${ORDER.map(c => `  <url><loc>${urlFor(c)}</loc>\n${ORDER.map(a => `    <xhtml:l
 fs.writeFileSync('site/sitemap.xml', sitemap);
 fs.writeFileSync('site/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 
-// Les pages légales portent aussi le nom du site
-for (const f of ['legal.html', 'privacy.html', 'licenses.html']) {
-  const src = `src/pages/${f}`;
-  if (fs.existsSync(src)) fs.writeFileSync(`site/${f}`, fs.readFileSync(src, 'utf8').replace(/\{\{brand\}\}/g, esc(BRAND)).replace(/\{\{source\}\}/g, SOURCE_URL ? `<a href="${esc(SOURCE_URL)}">${esc(SOURCE_URL)}</a>` : '<span class="todo">link coming soon</span>'));
+// ======= Pages annexes (src/pages/**.html) =======
+// Chaque fichier commence par un commentaire JSON :
+//   <!--{"title":"…","lang":"en","desc":"…","noindex":false,"alt":{"fr":"fr/guides/x.html"}}-->
+// Le reste du fichier est le contenu de la page (sans <html>, <head>, en-tête ni pied de page).
+const FOOT = {
+  en: [['about.html', 'About'], ['guides/', 'Guides'], ['contact.html', 'Contact'], ['terms.html', 'Terms of use'], ['sales.html', 'Terms of sale'], ['privacy.html', 'Privacy'], ['cookies.html', 'Cookies'], ['legal.html', 'Legal notice'], ['licenses.html', 'Licenses']],
+  fr: [['about.html', 'À propos'], ['fr/guides/', 'Guides'], ['contact.html', 'Contact'], ['terms.html', 'CGU'], ['sales.html', 'CGV'], ['privacy.html', 'Confidentialité'], ['cookies.html', 'Cookies'], ['legal.html', 'Mentions légales'], ['licenses.html', 'Licences']],
+};
+const CTA = { en: 'Remove a background', fr: 'Détourer une image' };
+const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
+const pages = [];
+for (const src of walk('src/pages').filter(f => f.endsWith('.html'))) {
+  const rel = path.relative('src/pages', src).split(path.sep).join('/');
+  const raw = fs.readFileSync(src, 'utf8');
+  const m = raw.match(/^<!--(\{[\s\S]*?\})-->\s*/);
+  if (!m) { console.warn('Page sans en-tête JSON :', rel); continue; }
+  const meta = JSON.parse(m[1]);
+  const body = raw.slice(m[0].length);
+  const lang = meta.lang || 'en';
+  const base = '../'.repeat(rel.split('/').length - 1);
+  const urlOf = (r) => `${SITE_URL}/${r.replace(/index\.html$/, '')}`;
+  const alts = meta.alt ? Object.entries({ [lang]: rel, ...meta.alt }).map(([l, r]) => `<link rel="alternate" hreflang="${l}" href="${urlOf(r)}">`).join('') : '';
+  const foot = (FOOT[lang] || FOOT.en).map(([h, t]) => `<a href="${base}${h}">${esc(t)}</a>`).join('');
+  const home = lang === 'fr' ? `${base}fr/` : `${base}`;
+  const html = `<!doctype html>
+<html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(meta.title)} · ${esc(BRAND)}</title>${meta.desc ? `<meta name="description" content="${esc(meta.desc)}">` : ''}${meta.noindex ? '<meta name="robots" content="noindex">' : ''}
+<link rel="canonical" href="${urlOf(rel)}">${alts}
+<link rel="icon" href="${base}favicon.ico" sizes="any"><link rel="icon" href="${base}assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="${base}assets/apple-touch-icon.png">
+<link rel="stylesheet" href="${base}assets/styles.css"></head>
+<body><header class="site-header"><a class="brand" href="${home}"><img class="brand-logo" src="${base}assets/logo-40.png" srcset="${base}assets/logo-80.png 2x" width="43" height="40" alt=""><span class="brand-name">${esc(BRAND)}</span></a><a class="btn btn-primary btn-sm page-cta" href="${home}">${esc(CTA[lang] || CTA.en)}</a></header>
+<main class="legal">
+${body.replace(/\{\{brand\}\}/g, esc(BRAND)).replace(/\{\{base\}\}/g, base).replace(/\{\{source\}\}/g, `<a href="${esc(SOURCE_URL)}">${esc(SOURCE_URL)}</a>`)}
+</main>
+<footer class="site-footer"><p>© ${new Date().getFullYear()} ${esc(BRAND)}</p><nav>${foot}</nav></footer>
+</body></html>
+`;
+  fs.mkdirSync(path.dirname(`site/${rel}`), { recursive: true });
+  fs.writeFileSync(`site/${rel}`, html);
+  if (!meta.noindex) pages.push(urlOf(rel));
 }
+// Ajoute les pages indexables au plan du site
+if (pages.length) {
+  const sm = fs.readFileSync('site/sitemap.xml', 'utf8').replace('</urlset>', pages.map(u => `  <url><loc>${u}</loc></url>`).join('\n') + '\n</urlset>');
+  fs.writeFileSync('site/sitemap.xml', sm);
+}
+
+// ads.txt (Google AdSense) : mettre l'identifiant d'éditeur « pub-… » une fois le compte AdSense créé
+const ADSENSE_PUB = '';
+fs.writeFileSync('site/ads.txt', ADSENSE_PUB
+  ? `google.com, ${ADSENSE_PUB}, DIRECT, f08c47fec0942fa0\n`
+  : '# À compléter : google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0\n');
+
 console.log(`OK : ${ORDER.length} langues générées pour ${BRAND}`);
 
 // Manifeste pour l'icône sur l'écran d'accueil des téléphones
