@@ -1,0 +1,32 @@
+{
+ "size": 1024,
+ "mean": [
+  0.5,
+  0.5,
+  0.5
+ ],
+ "std": [
+  1,
+  1,
+  1
+ ],
+ "output": "minmax",
+ "license": "Apache-2.0",
+ "source": "https://github.com/xuebinqin/DIS",
+ "parts": [
+  "part-00-b28fd593b2.bin",
+  "part-01-7462bbe123.bin",
+  "part-02-7894f12737.bin",
+  "part-03-ed35c39a82.bin",
+  "part-04-cab97f9d7d.bin",
+  "part-05-8ff2609458.bin",
+  "part-06-78fa8cf127.bin",
+  "part-07-8872c3d3b3.bin"
+ ],
+ "bytes": 31172532,
+ "rawBytes": 46360717,
+ "curve": [
+  0.2,
+  0.8
+ ]
+}

@@ -7,8 +7,10 @@ Site **100 % statique** : le détourage IA tourne dans le navigateur du visiteur
   - `index.html` : page d'accueil + éditeur
   - `assets/app.js` : l'éditeur (pinceaux, fonds, amélioration, export)
   - `assets/worker.js` : moteur de détourage (généré, ne pas modifier à la main)
-  - `bgdata/` : modèle IA + moteur ONNX découpés en morceaux de 4 Mo (~160 Mo)
-  - `.htaccess` : réglages Hostinger (cache du modèle, accélération multi-cœur, HTTPS)
+  - `models/` : modèles IA (ISNet) compressés et découpés en morceaux de 4 Mo
+  - `ort/` : moteur ONNX Runtime (WebAssembly)
+  - `_headers` : réglages Cloudflare Pages (accélération multi-cœur, cache)
+  - `.htaccess` : mêmes réglages pour un hébergement Apache (Hostinger)
   - pages légales à compléter
 - `src/worker.js` : source du moteur
 - `tools/` : scripts de construction et serveur de test local
@@ -20,16 +22,16 @@ node tools/serve.mjs
 ```
 puis ouvrir http://localhost:8080. (Ouvrir `index.html` en double-clic ne marche pas : le moteur IA a besoin d'un vrai serveur.)
 
-## Mettre en ligne chez Hostinger
-1. Prendre un hébergement web (pas besoin de VPS).
-2. Gestionnaire de fichiers (ou FTP) : envoyer **le contenu** du dossier `site/` dans `public_html/`, y compris le fichier caché `.htaccess`.
-3. Activer le certificat SSL (gratuit chez Hostinger).
+## Mise en ligne (Cloudflare Pages, gratuit)
+Le projet Cloudflare Pages est relié au dépôt GitHub : chaque envoi sur la branche `main` met le site à jour.
+Réglages : « Framework preset » None, « Build command » vide, « Build output directory » `site`.
 
 ## Reconstruire le moteur (seulement si on change de version)
 ```
 npm install
-npx esbuild src/worker.js --bundle --format=esm --minify --outfile=site/assets/worker.js
-node tools/build-resources.mjs <dossier du paquet @imgly/background-removal-data décompressé>
+npm run build                                   # moteur + pages de toutes les langues
+pip install onnx onnxruntime numpy
+python tools/build-models.py <dossier des .onnx>  # modèles (voir l'en-tête du script)
 ```
 
 ## Langues
@@ -42,9 +44,6 @@ node tools/build-resources.mjs <dossier du paquet @imgly/background-removal-data
 ## Changer le nom et l'adresse du site
 En haut de `tools/build-i18n.mjs` : `BRAND` (nom) et `SITE_URL` (adresse finale, nécessaire pour Google). Puis `node tools/build-i18n.mjs`.
 
-## Licence et code source (AGPL v3)
-Le moteur de détourage est sous licence AGPL v3, donc ce site l'est aussi (fichier `LICENSE`). Concrètement : le code doit être public, et le site doit indiquer où le trouver.
-1. Créer un compte sur https://github.com (gratuit).
-2. Créer un dépôt **public** vide nommé `bgone` (bouton « New repository », sans README ni licence).
-3. Y envoyer ce dossier (Claude peut le faire une fois le dépôt créé et GitHub connecté).
-4. Mettre l'adresse du dépôt dans `SOURCE_URL` en haut de `tools/build-i18n.mjs`, puis `node tools/build-i18n.mjs`. Le lien apparaît dans la page « Licenses & source code », accessible depuis le pied de page de toutes les langues.
+## Licences
+Le moteur (ONNX Runtime, MIT) et le modèle (ISNet, Apache-2.0) sont sous licences permissives : aucune obligation de publier le code.
+Le fichier `LICENSE` (AGPL v3) concerne seulement le code du site lui-même ; son auteur peut le garder ou en changer.

@@ -1,6 +1,7 @@
 // Éditeur de détourage côté navigateur.
 // Tout est calculé sur l'appareil de l'utilisateur, aucune image n'est envoyée.
 
+const MODEL_PRO = 'isnet', MODEL_FAST = 'isnet-q8';
 const WORK_MAX = 2500;   // taille max (px, côté le plus long) de travail dans l'éditeur
 const STD_MAX = 1500;    // taille max du téléchargement gratuit
 const UNDO_LIMIT = 20;
@@ -40,7 +41,8 @@ const S = {
   zoom: 1, tx: 0, ty: 0,
   comparing: false,
   ready: false,
-  model: isMobile ? 'isnet_quint8' : 'isnet_fp16',
+  // « pro » = BiRefNet (meilleurs bords et ombres, plus lourd) ; « fast » = ISNet (léger, pour mobiles et petites machines)
+  model: (isMobile || (navigator.deviceMemory && navigator.deviceMemory < 4)) ? MODEL_FAST : MODEL_PRO,
 };
 
 /* =================== Utilitaires =================== */
@@ -190,12 +192,14 @@ async function segment(model) {
     let res;
     try { res = await runSegmentation(model); }
     catch (first) {
-      // Repli : on relance un moteur neuf une seconde fois avant d'abandonner
+      // Repli : moteur neuf, puis modèle léger si le modèle « pro » ne passe pas (mémoire insuffisante, etc.)
       console.warn('Nouvel essai après erreur du moteur :', first);
       if (worker) { worker.terminate(); worker = null; }
       dl.clear();
+      if (model === MODEL_PRO) model = MODEL_FAST;
       res = await runSegmentation(model);
     }
+    console.info(`Détourage ${model} : ${Math.round(res.ms)} ms, ${res.threads} cœur(s)`);
     S.autoAlpha = res.alpha;
     S.model = model;
     if (S.ready) pushUndo();
@@ -203,7 +207,7 @@ async function segment(model) {
     S.ready = true;
     updateMaskEff();
     $('[data-action=download]').disabled = false;
-    $('#rerun-precise').hidden = model === 'isnet_fp16';
+    $('#rerun-precise').hidden = model === MODEL_PRO;
     hideProcessing();
     render();
     const s = ((performance.now() - t0) / 1000).toFixed(1);
@@ -801,7 +805,7 @@ document.addEventListener('click', (e) => {
     case 'reset-mask':
       if (S.autoAlpha) { pushUndo(); writeAlpha(S.mask, S.autoAlpha); resetRefineUI(); render(); toast(t('js_mask_reset')); }
       break;
-    case 'rerun-precise': segment('isnet_fp16'); break;
+    case 'rerun-precise': segment(MODEL_PRO); break;
     case 'hd-info': $('#hd-modal').showModal(); break;
   }
 });
