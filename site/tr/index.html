@@ -52,7 +52,7 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Yapay zekâ ile arka plan kaldırma · %100 tarayıcınızda</p>
-        <h1>Arka plan gider.<br><em>Konunuz kalır.</em></h1>
+        <h1>Arka plan gider.<br><em>Ana nesne kalır.</em></h1>
         <p class="lead">Bir fotoğraf yükleyin, arka plan otomatik olarak kaldırılsın. Ayrıntıları fırçayla düzeltin, yeni arka plan ekleyin, renkleri iyileştirin ve indirin.</p>
         <ul class="hero-points">
           <li>Standart kalitede ücretsiz</li>
@@ -79,7 +79,7 @@
       <article class="feature">
         <div class="feature-ico ico-cut" aria-hidden="true"></div>
         <h2>Otomatik kesim</h2>
-        <p>İnsanlar, ürünler, evcil hayvanlar, nesneler: saçlar ve ince kenarlar dahil konu saniyeler içinde ayrılır.</p>
+        <p>İnsanlar, ürünler, evcil hayvanlar, nesneler: saçlar ve ince kenarlar dahil ana nesne saniyeler içinde ayrılır.</p>
       </article>
       <article class="feature">
         <div class="feature-ico ico-brush" aria-hidden="true"></div>
@@ -103,7 +103,7 @@
       <ol class="steps">
         <li><span class="step-n">1</span><h3>Yükleyin</h3><p>Cihazınızdan bir fotoğraf sürükleyin, yapıştırın veya seçin.</p></li>
         <li><span class="step-n">2</span><h3>Ayarlayın</h3><p>Arka plan kendiliğinden kaldırılır. Gerekirse rötuş yapın ve arka plan seçin.</p></li>
-        <li><span class="step-n">3</span><h3>İndirin</h3><p>Şeffaf PNG, JPG veya WEBP; isterseniz konuya göre kırpılmış.</p></li>
+        <li><span class="step-n">3</span><h3>İndirin</h3><p>Şeffaf PNG, JPG veya WEBP; isterseniz nesneye göre kırpılmış.</p></li>
       </ol>
     </section>
 
@@ -137,7 +137,7 @@
     <section class="faq" id="faq">
       <h2 class="section-title">Sık sorulan sorular</h2>
       <details><summary>Fotoğraflarım bir sunucuya yükleniyor mu?</summary><p>Hayır. Arka plan kaldırma ve düzenleme tarayıcınızda, cihazınızda yapılır. Bu site hiçbir görseli göndermez veya saklamaz.</p></details>
-      <details><summary>İlk kesim neden daha yavaş?</summary><p>İlk seferde tarayıcınız yapay zekâ modelini indirir (kaliteye göre yaklaşık 45-90 MB). Sonra önbelleğe alınır ve sonraki kesimler çok daha hızlı olur.</p></details>
+      <details><summary>İlk kesim neden daha yavaş?</summary><p>İlk seferde tarayıcınız yapay zekâ modelini indirir (kaliteye göre yaklaşık 30-80 MB). Sonra önbelleğe alınır ve sonraki kesimler çok daha hızlı olur.</p></details>
       <details><summary>Sonuç kusursuz değil, ne yapmalıyım?</summary><p>Rötuş sekmesini açın: silgi kalan arka planı temizler, Geri getir fırçası yanlışlıkla silinen kısımları geri getirir, yumuşatma kenarları yumuşatır.</p></details>
       <details><summary>Hangi biçimlerde indirebilirim?</summary><p>PNG (şeffaflıkla), JPG ve WEBP. Şeffaf arka planı korumak için PNG'yi seçin.</p></details>
       <details><summary>Telefonda çalışır mı?</summary><p>Evet, güncel bir tarayıcıda. Telefonlarda indirme boyutunu küçük tutmak için varsayılan olarak standart kalite modeli kullanılır.</p></details>
@@ -213,7 +213,7 @@
             <button class="chip" data-action="bg-blur">Orijinali bulanıklaştır</button>
             <label class="chip">Kendi görselim<input type="file" id="bg-file" accept="image/*" hidden></label>
           </div>
-          <label class="row-toggle"><input type="checkbox" id="shadow"> Konunun altına gölge</label>
+          <label class="row-toggle"><input type="checkbox" id="shadow"> Nesnenin altına gölge</label>
         </div>
 
         <div class="tab-pane" data-pane="retouch" hidden>
@@ -270,7 +270,7 @@
         <label><input type="radio" name="fmt" value="jpg"><span>JPG</span></label>
         <label><input type="radio" name="fmt" value="webp"><span>WEBP</span></label>
       </fieldset>
-      <label class="row-toggle"><input type="checkbox" id="crop"> Konuya göre kırp</label>
+      <label class="row-toggle"><input type="checkbox" id="crop"> Nesneye göre kırp</label>
       <p class="fmt-note" id="fmt-note"></p>
       <div class="dl-options">
         <button class="dl-opt" value="std" id="dl-std">
@@ -301,7 +301,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script type="application/json" id="i18n">{"bg_color":"Renk","bg_gradients":"Degradeler","bg_image":"Görsel","bg_blur":"Orijinali bulanıklaştır","bg_own":"Kendi görselim","bg_shadow":"Konunun altına gölge","bg_transparent":"Şeffaf","bg_custom":"Özel renk","dl_format":"Biçim","dl_crop":"Konuya göre kırp","dl_std":"Standart","dl_free":"Ücretsiz","dl_hd_soon":"Yakında · kredi","dl_upto":"{w} × {h} px'e kadar","dl_jpg_note":"JPG şeffaflığı desteklemez: arka plan beyaz olur.","dl_png_note":"Şeffaf arka plan korunur.","js_preparing":"Yapay zekâ hazırlanıyor…","js_download_once":"Tek seferlik indirme: {a} / {b} MB","js_removing":"Arka plan kaldırılıyor…","js_analyzing":"Görsel analiz ediliyor","js_edges":"Kenarlar iyileştiriliyor","js_starting":"Motor başlatılıyor","js_not_image":"Bu dosya bir görsel değil.","js_cant_read":"Bu görsel okunamadı. JPG veya PNG deneyin (iPhone HEIC fotoğrafları her tarayıcıda açılmaz).","js_done":"Arka plan {s} sn'de kaldırıldı","js_failed":"Arka plan kaldırılamadı: {e}. Güncel bir tarayıcı deneyin (Chrome, Edge, Firefox, Safari).","js_enhanced":"Otomatik iyileştirme uygulandı","js_export_fail":"Bu tarayıcıda dışa aktarma yapılamıyor.","js_downloaded":"Görsel indirildi ({w} × {h} px)","js_mask_reset":"Otomatik kesim geri yüklendi","js_bg_fail":"Bu arka plan görseli okunamadı."}</script>
+  <script type="application/json" id="i18n">{"bg_color":"Renk","bg_gradients":"Degradeler","bg_image":"Görsel","bg_blur":"Orijinali bulanıklaştır","bg_own":"Kendi görselim","bg_shadow":"Nesnenin altına gölge","bg_transparent":"Şeffaf","bg_custom":"Özel renk","dl_format":"Biçim","dl_crop":"Nesneye göre kırp","dl_std":"Standart","dl_free":"Ücretsiz","dl_hd_soon":"Yakında · kredi","dl_upto":"{w} × {h} px'e kadar","dl_jpg_note":"JPG şeffaflığı desteklemez: arka plan beyaz olur.","dl_png_note":"Şeffaf arka plan korunur.","js_preparing":"Yapay zekâ hazırlanıyor…","js_download_once":"Tek seferlik indirme: {a} / {b} MB","js_removing":"Arka plan kaldırılıyor…","js_analyzing":"Görsel analiz ediliyor","js_edges":"Kenarlar iyileştiriliyor","js_starting":"Motor başlatılıyor","js_not_image":"Bu dosya bir görsel değil.","js_cant_read":"Bu görsel okunamadı. JPG veya PNG deneyin (iPhone HEIC fotoğrafları her tarayıcıda açılmaz).","js_done":"Arka plan {s} sn'de kaldırıldı","js_failed":"Arka plan kaldırılamadı: {e}. Güncel bir tarayıcı deneyin (Chrome, Edge, Firefox, Safari).","js_enhanced":"Otomatik iyileştirme uygulandı","js_export_fail":"Bu tarayıcıda dışa aktarma yapılamıyor.","js_downloaded":"Görsel indirildi ({w} × {h} px)","js_mask_reset":"Otomatik kesim geri yüklendi","js_bg_fail":"Bu arka plan görseli okunamadı."}</script>
   <script type="module" src="../assets/app.js"></script>
 </body>
 </html>
