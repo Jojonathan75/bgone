@@ -67,6 +67,10 @@ button { font: inherit; color: inherit; }
 .site-nav { display: flex; gap: 22px; margin-inline-start: auto; font-size: 15px; color: var(--ink-2); }
 .site-nav a { text-decoration: none; }
 .site-nav a:hover { color: var(--ink); }
+.site-nav a { white-space: nowrap; }
+/* Écrans moyens : on garde les liens vers les outils, on masque les ancres de la page */
+@media (max-width: 1240px) { .site-nav a[href^="#"] { display: none; } }
+@media (max-width: 960px) { .site-nav:not(.tool-nav) { display: none; } .lang-select { margin-inline-start: auto; } }
 
 /* ---------- Hero ---------- */
 main { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
